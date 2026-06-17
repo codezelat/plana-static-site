@@ -8,17 +8,17 @@ export default function Hero() {
         <Image src="/images/placeholder-1.png" alt="Events background" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-black/30 via-brand-deep/35 to-brand-black/65" />
 
-        <div className="absolute inset-0 flex items-center">
-          <div className="max-w-7xl mx-auto px-6 w-full">
-            <div className="max-w-3xl text-white">
-              <h1 className="text-4xl sm:text-6xl font-extrabold leading-tight">
+        <div className="absolute inset-0 flex items-start">
+            <div className="max-w-7xl mx-auto px-6 w-full pt-28 md:pt-36">
+            <div className="max-w-3xl mx-auto text-white text-center">
+              <h1 className="text-4xl sm:text-6xl font-mediumbold leading-tight">
                 Every Great Event Starts with Plan A
               </h1>
               <p className="mt-4 text-lg sm:text-xl text-white/90">
                 From weddings and corporate gatherings to birthdays and concerts, Plan A creates unforgettable experiences across Sri Lanka.
               </p>
 
-              <div className="mt-8 flex gap-4">
+              <div className="mt-8 flex gap-4 justify-center">
                 <Link href="#contact" className="bg-brand-navy px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-brand-deep hover:scale-99 transition-transform">
                   Plan Your Event
                 </Link>
@@ -27,7 +27,7 @@ export default function Hero() {
                 </a>
               </div>
 
-              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-2xl">
+              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto">
                 <Stat number="100+" label="Events Planned" />
                 <Stat number="500+" label="Happy Guests" />
                 <Stat number="Islandwide" label="Coverage" />
