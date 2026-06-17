@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f3fbfb;
+  --foreground: #0d0d0d;
+  --brand-navy: #020659;
+  --brand-deep: #162c40;
+  --brand-steel: #3f89a6;
+  --brand-aqua: #8fd9d9;
+  --brand-black: #0d0d0d;
+  --font-nexa: "Nexa", "Nexa Regular", "Nexa Light", Arial, Helvetica, sans-serif;
+  --font-pliant: "Pliant", "Pliant Regular", "Nexa", Arial, Helvetica, sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-deep: var(--brand-deep);
+  --color-brand-steel: var(--brand-steel);
+  --color-brand-aqua: var(--brand-aqua);
+  --color-brand-black: var(--brand-black);
+  --font-sans: var(--font-nexa);
+  --font-serif: var(--font-pliant);
+  --font-mono: "Nexa", "Courier New", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
+ 
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-nexa);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav,
+button {
+  font-family: var(--font-pliant);
 }
