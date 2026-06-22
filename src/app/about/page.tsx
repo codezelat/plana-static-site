@@ -19,22 +19,22 @@ interface TeamMember {
 export default function About() {
   const values: ValueItem[] = [
     {
-      title: "Logistical Feasibility First",
+      title: "Logistical Feasibility",
       desc: "An event is only as good as its weakest logistical link. We draft granular run sheets, safety calculations, and weather contingencies before a single decorator begins work.",
       icon: "📋",
     },
     {
-      title: "Tailored Concept Curation",
+      title: "Unique Concepts",
       desc: "We do not believe in templates. Every wedding theme, corporate layout, and concert setup is custom-engineered to match the location narrative.",
       icon: "✨",
     },
     {
-      title: "The Interconnected Loop",
-      desc: "Our strategic partnerships with Sri Lanka&rsquo;s best suppliers, caterers, and AV techs ensure flawless onsite execution and clean contractual accountability.",
+      title: "Interconnection",
+      desc: "Our strategic partnerships with Sri Lanka's best suppliers, caterers, and AV techs ensure flawless onsite execution and clean contractual accountability.",
       icon: "♾️",
     },
     {
-      title: "Timeline Control Velocity",
+      title: "Time Management",
       desc: "Live events move fast. Our onsite directors manage stage schedules, lighting cues, and guest movements with absolute structural precision.",
       icon: "⏱️",
     },
@@ -42,27 +42,27 @@ export default function About() {
 
   const team: TeamMember[] = [
     {
-      name: "Jax Sterling",
+      name: "Kasun Jayasinghe",
       role: "Event Logistics Director",
-      bio: "Jax has managed logistics for international conferences and stadium-scale events across Sri Lanka, specializing in site layouts and flow operations.",
+      bio: "Kasun has managed logistics for international conferences and stadium-scale events across Sri Lanka, specializing in site layouts and flow operations.",
       avatar: "⚓",
     },
     {
-      name: "Mia Takahashi",
+      name: "Minoli Perera",
       role: "Concept Creative Lead",
-      bio: "Mia designs custom visuals, stage themes, and lighting scopes, bridging the gap between brand voice and client atmospheres.",
+      bio: "Minoli designs custom visuals, stage themes, and lighting scopes, bridging the gap between brand voice and client atmospheres.",
       avatar: "🎨",
     },
     {
-      name: "Rohan Patel",
+      name: "Rohan Goonetilleke",
       role: "Technical AV & Rigging Lead",
       bio: "With over 12 years in concert production, Rohan oversees outdoor sound arrays, truss structural checks, and staging safety lines.",
       avatar: "🔊",
     },
     {
-      name: "Sophie Dubois",
+      name: "Sanduni Fernando",
       role: "Hospitality & Guest Liaison",
-      bio: "Sophie coordinates client consultations, hotel vendor bookings, and VIP airport/transit transfers across Galle and Colombo.",
+      bio: "Sanduni coordinates client consultations, hotel vendor bookings, and VIP airport/transit transfers across Galle and Colombo.",
       avatar: "⭐",
     },
   ];
