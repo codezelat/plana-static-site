@@ -144,19 +144,19 @@ export default function Home() {
         <div className="hero-overlay-glow"></div>
         <div className="container hero-container">
           <div className="hero-content">
-            <span className="section-tag animate-float">CORPORATE EVENT SPECIALISTS</span>
+            <span className="section-tag animate-float">Corporate Event Specialists</span>
             <h1 className="hero-title">
-              Every Great Event Starts with <span className="gradient-text">Plan A</span>
+              Every Great Event Starts with <span className="gradient-text">Plan&nbsp;A</span>
             </h1>
             <p className="hero-subtitle">
-              Sri Lanka&apos;s premier corporate event management company. From conferences and convocations to awards ceremonies and product launches, we deliver flawless experiences at scale.
+              We design and deliver corporate conferences, university convocations, awards ceremonies, and brand experiences that move audiences and build reputations. Based in Colombo, deployed across Sri&nbsp;Lanka.
             </p>
             <div className="hero-ctas">
               <Link href="#consultation" className="glow-btn">
-                Start Planning
+                Get a Proposal
               </Link>
               <Link href="/portfolio" className="glow-btn-outline">
-                Portfolio
+                See Our Work
               </Link>
             </div>
           </div>
@@ -169,9 +169,9 @@ export default function Home() {
       <section className="core-pillars-section">
         <div className="container">
           <div className="section-title-wrap">
-            <span className="section-tag">OUR METHODOLOGY</span>
-            <h2 className="section-title">The Plan A Advantage</h2>
-            <p className="section-desc">The convergence of corporate-grade logistics, brand-aligned staging, and Sri Lanka&apos;s most trusted vendor network.</p>
+            <span className="section-tag">Why Plan A</span>
+            <h2 className="section-title">Built for Corporate Scale</h2>
+            <p className="section-desc">Three interconnected strengths that make every event flawless: operational rigor, brand-aligned design, and Sri&nbsp;Lanka&apos;s deepest vendor network.</p>
           </div>
 
           <div className="grid-3">
@@ -195,9 +195,9 @@ export default function Home() {
       <section className="services-grid-section">
         <div className="container">
           <div className="section-title-wrap">
-            <span className="section-tag">CATEGORIES</span>
-            <h2 className="section-title">Pillars of Service</h2>
-            <p className="section-desc">Tailored frameworks engineered to match your event profile and scale targets.</p>
+            <span className="section-tag">What We Deliver</span>
+            <h2 className="section-title">Event Services</h2>
+            <p className="section-desc">From boardroom briefings to stadium-scale productions, we match the right framework to your event objectives and audience size.</p>
           </div>
 
           <div className="grid-2">
@@ -209,7 +209,7 @@ export default function Home() {
                 <h3 className="service-card-title">{service.title}</h3>
                 <p className="service-card-desc">{service.desc}</p>
                 <Link href="/services" className="service-card-link">
-                  Detailed Workflow <span className="arrow">→</span>
+                  Explore This Service <span className="arrow">→</span>
                 </Link>
               </div>
             ))}
@@ -221,9 +221,9 @@ export default function Home() {
       <section className="asymmetrical-portfolio-section">
         <div className="container">
           <div className="section-title-wrap">
-            <span className="section-tag">PAST EVENTS</span>
-            <h2 className="section-title">Featured Corporate & Event Showcase</h2>
-            <p className="section-desc">Explore how we execute premium event logistics across Colombo, Galle, and Kandy.</p>
+            <span className="section-tag">Featured Work</span>
+            <h2 className="section-title">Events We&apos;ve Delivered</h2>
+            <p className="section-desc">Real projects, real results. Explore how we bring corporate visions to life across Sri&nbsp;Lanka.</p>
           </div>
 
           <div className="asymmetrical-grid">
@@ -273,16 +273,16 @@ export default function Home() {
         <div className="container conversion-container glass-card">
           <div className="grid-2 align-center">
             <div className="conversion-info">
-              <span className="section-tag">SCHEDULE</span>
-              <h2 className="conversion-title">Let&apos;s build your Plan A.</h2>
+              <span className="section-tag">Let&apos;s Talk</span>
+              <h2 className="conversion-title">Tell us about your next event.</h2>
               <p className="conversion-desc">
-                Contact our Colombo coordination office to lock down dates, draft early timelines, and discuss vendor allocations for your next corporate event.
+                Share your brief and our Colombo team will respond within 24 hours with a tailored proposal covering venue options, staging concepts, and budget projections.
               </p>
               <ul className="conversion-bullets">
-                <li>✓ Integrated Vendor Allocation</li>
-                <li>✓ Feasibility & Budget Outline</li>
-                <li>✓ Multi-Venue & Multi-Day Operations</li>
-                <li>✓ Corporate Brand Integration</li>
+                <li>✓ Free initial consultation</li>
+                <li>✓ Venue & vendor shortlisting</li>
+                <li>✓ Custom budget framework</li>
+                <li>✓ Multi-day event planning</li>
               </ul>
             </div>
 
@@ -290,8 +290,8 @@ export default function Home() {
               {formSubmitted ? (
                 <div className="form-success-box">
                   <div className="success-check">✓</div>
-                  <h3>Planning Started</h3>
-                  <p>Our event coordination directors will review your parameters and follow up within 24 hours with a custom proposal outline.</p>
+                  <h3>We&apos;re On It</h3>
+                  <p>Our team is reviewing your brief. Expect a tailored proposal with venue options and budget projections within 24 hours.</p>
                 </div>
               ) : (
                 <form onSubmit={handleFormSubmit} className="funnel-form">

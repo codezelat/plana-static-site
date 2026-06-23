@@ -46,12 +46,12 @@ export default function Contact() {
     <>
       <section className="contact-hero">
         <div className="container">
-          <span className="section-tag">START PLANNING</span>
+          <span className="section-tag">Get in Touch</span>
           <h1 className="hero-title">
-            Let&apos;s build <span className="gradient-text">your Plan A.</span>
+            Let&apos;s build <span className="gradient-text">your&nbsp;Plan&nbsp;A.</span>
           </h1>
           <p className="hero-subtitle">
-            Submit your corporate event requirements below. Our Colombo coordination office will review your brief, draft early timelines, and propose venue and vendor allocations.
+            Tell us about your event. Our Colombo team will review your brief and respond within 24 hours with a tailored proposal.
           </p>
         </div>
       </section>
@@ -62,7 +62,7 @@ export default function Contact() {
           <div className="contact-details-wrap">
             <div className="contact-detail-card glass-card">
               <h2 className="details-title">Colombo Office</h2>
-              <p className="details-desc">Connect directly with our event directors to check venue availability and licensing requirements.</p>
+              <p className="details-desc">Reach out directly to discuss your event requirements, check venue availability, or schedule a site visit.</p>
               
               <div className="details-list">
                 <div className="detail-item">
@@ -105,10 +105,10 @@ export default function Contact() {
             {formSubmitted ? (
               <div className="form-success">
                 <span className="success-icon">✓</span>
-                <h2>Inquiry Successfully Received</h2>
-                <p>Thank you for choosing Plan A. Our corporate event directors in Colombo are reviewing your brief against venue availability and vendor schedules. We will follow up via email within 24 hours to schedule your planning call.</p>
+                <h2>Brief Received</h2>
+                <p>Thanks for reaching out. Our team is reviewing your requirements against venue availability and vendor schedules. We&apos;ll follow up within 24 hours with a tailored proposal.</p>
                 <button onClick={() => setFormSubmitted(false)} className="glow-btn-outline reset-btn">
-                  Send Another Inquiry
+                  Send Another Brief
                 </button>
               </div>
             ) : (
@@ -232,7 +232,7 @@ export default function Contact() {
                 </div>
 
                 <button type="submit" disabled={isSubmitting} className="glow-btn contact-submit-btn">
-                  {isSubmitting ? "Submitting Parameters..." : "Submit Inquiry"}
+                  {isSubmitting ? "Sending..." : "Send Brief"}
                 </button>
               </form>
             )}

@@ -79,7 +79,7 @@ export default function Header() {
             </button>
 
             <Link href="/contact" className="glow-btn header-cta">
-              Start Planning
+              Get a Proposal
             </Link>
 
             <button
@@ -120,7 +120,7 @@ export default function Header() {
             className="glow-btn mobile-cta"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Start Planning
+            Get a Proposal
           </Link>
         </nav>
       </div>

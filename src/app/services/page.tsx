@@ -105,12 +105,12 @@ export default function Services() {
       {/* Hero Section */}
       <section className="services-hero">
         <div className="container">
-          <span className="section-tag">WHAT WE DO</span>
+          <span className="section-tag">What We Do</span>
           <h1 className="hero-title">
-            Expertise that scales. <span className="gradient-text">Experiences that endure.</span>
+            Expertise that scales.<br /><span className="gradient-text">Experiences that endure.</span>
           </h1>
           <p className="hero-subtitle">
-            From multi-day corporate conferences and university convocations to awards galas and product launches, Plan A delivers premium event production across Sri Lanka.
+            We plan and execute every type of corporate and social event, from multi-day conferences and formal convocations to product launches and intimate celebrations.
           </p>
         </div>
       </section>
@@ -155,9 +155,9 @@ export default function Services() {
       <section className="workflow-section">
         <div className="container">
           <div className="section-title-wrap">
-            <span className="section-tag">OUR RUN SHEET</span>
-            <h2 className="section-title">The Event Blueprint</h2>
-            <p className="section-desc">Our structural path to onboarding parameters, vendor sync, and live execution control.</p>
+            <span className="section-tag">How We Work</span>
+            <h2 className="section-title">Our Process</h2>
+            <p className="section-desc">A proven four-stage framework that takes your event from initial brief to flawless live execution.</p>
           </div>
 
           <div className="grid-4">
@@ -202,10 +202,10 @@ export default function Services() {
       {/* Call to Action */}
       <section className="services-cta-section">
         <div className="container cta-box glass-card">
-          <h2>Ready to plan your next corporate event?</h2>
-          <p>Book a strategy session with our event directors to review venue options, staging concepts, and vendor allocations.</p>
+          <h2>Ready to get started?</h2>
+          <p>Tell us about your event and we&apos;ll come back with a tailored proposal within 24 hours.</p>
           <Link href="/contact" className="glow-btn">
-            Start Planning
+            Get a Proposal
           </Link>
         </div>
       </section>

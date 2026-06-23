@@ -111,12 +111,12 @@ export default function Portfolio() {
     <>
       <section className="portfolio-hero">
         <div className="container">
-          <span className="section-tag">CASE STUDIES</span>
+          <span className="section-tag">Our Work</span>
           <h1 className="portfolio-title">
-            Architecting <span className="gradient-text">Experiences.</span>
+            Events that <span className="gradient-text">speak for themselves.</span>
           </h1>
           <p className="portfolio-subtitle">
-            Browse our portfolio of corporate conferences, convocations, awards ceremonies, and premium events across Sri Lanka.
+            Corporate conferences, university convocations, awards galas, and celebrations we&apos;ve brought to life across Sri&nbsp;Lanka.
           </p>
 
           <div className="filter-tabs">
@@ -182,10 +182,10 @@ export default function Portfolio() {
       {/* Stats Callout Section */}
       <section className="portfolio-cta-section">
         <div className="container cta-box glass-card">
-          <h2>Ready to plan your next corporate event?</h2>
-          <p>Connect with our event directors in Colombo to discuss venue options, staging concepts, and timeline parameters.</p>
+          <h2>Want results like these?</h2>
+          <p>Tell us about your next event. We&apos;ll put together a tailored proposal within 24 hours.</p>
           <Link href="/contact" className="glow-btn">
-            Start Planning
+            Get a Proposal
           </Link>
         </div>
       </section>

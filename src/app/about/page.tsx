@@ -72,12 +72,12 @@ export default function About() {
       {/* Hero Section */}
       <section className="about-hero">
         <div className="container">
-          <span className="section-tag">WHO WE ARE</span>
+          <span className="section-tag">About Us</span>
           <h1 className="hero-title">
-            Our philosophy. <span className="gradient-text">Interconnected loops.</span>
+            The people behind <span className="gradient-text">the&nbsp;plan.</span>
           </h1>
           <p className="hero-subtitle">
-            Plan A is Sri Lanka&apos;s trusted partner for corporate events, conferences, convocations, and celebrations. We bring enterprise-grade logistics to every occasion.
+            We are a team of event strategists, production specialists, and logistics coordinators who believe every corporate event should build your brand, not just fill a calendar.
           </p>
         </div>
       </section>
@@ -86,8 +86,8 @@ export default function About() {
       <section className="philosophy-section">
         <div className="container grid-2 align-center">
           <div className="philosophy-content">
-            <span className="section-tag">THE LOOP LOGIC</span>
-            <h2 className="philosophy-title">Every great event starts with Plan A.</h2>
+            <span className="section-tag">Our Approach</span>
+            <h2 className="philosophy-title">Three loops. One seamless event.</h2>
             <p className="philosophy-desc">
               Planning a corporate event is an exercise in complex logistics. A single failed coordination point—a delayed speaker transfer, an AV glitch, a seating misalignment—can undermine months of preparation and brand investment.
             </p>
@@ -109,8 +109,8 @@ export default function About() {
       <section className="values-section">
         <div className="container">
           <div className="section-title-wrap">
-            <span className="section-tag">OUR CORE VALUES</span>
-            <h2 className="section-title">Logistics & Curation Standards</h2>
+            <span className="section-tag">What Drives Us</span>
+            <h2 className="section-title">Our Standards</h2>
             <p className="section-desc">The principles that govern our corporate event delivery and vendor partnerships.</p>
           </div>
 
@@ -132,8 +132,8 @@ export default function About() {
       <section className="team-section">
         <div className="container">
           <div className="section-title-wrap">
-            <span className="section-tag">THE COORDINATORS</span>
-            <h2 className="section-title">Meet the Event Directors</h2>
+            <span className="section-tag">The Team</span>
+            <h2 className="section-title">Meet the Directors</h2>
             <p className="section-desc">Our directors bring decades of combined experience in corporate event management, conference production, and ceremonial staging.</p>
           </div>
 
@@ -155,10 +155,10 @@ export default function About() {
       {/* CTA Box */}
       <section className="about-cta-section">
         <div className="container cta-box glass-card">
-          <h2>Ready to plan your next corporate event?</h2>
-          <p>Connect with our event directors to discuss your conference, convocation, or awards ceremony requirements.</p>
+          <h2>Let&apos;s work together</h2>
+          <p>Tell us about your next conference, convocation, or corporate event. We&apos;ll put together a plan.</p>
           <Link href="/contact" className="glow-btn">
-            Connect With a Coordinator
+            Get a Proposal
           </Link>
         </div>
       </section>
