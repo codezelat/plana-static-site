@@ -264,7 +264,7 @@ export default function Contact() {
 
         .details-title {
           font-size: 1.75rem;
-          color: #fff;
+          color: var(--text-primary);
           margin-bottom: 1rem;
         }
 
@@ -288,7 +288,7 @@ export default function Contact() {
         .detail-icon {
           font-size: 1.25rem;
           color: var(--color-powder);
-          background: rgba(22, 44, 64, 0.2);
+          background: var(--card-icon-bg);
           width: 44px;
           height: 44px;
           border-radius: 4px;
@@ -316,7 +316,7 @@ export default function Contact() {
         .detail-link {
           font-size: 1.1rem;
           font-weight: 600;
-          color: #fff;
+          color: var(--text-primary);
         }
 
         .detail-link:hover {
@@ -326,7 +326,7 @@ export default function Contact() {
         .detail-link-static {
           font-size: 1rem;
           font-weight: 500;
-          color: #fff;
+          color: var(--text-primary);
           line-height: 1.5;
         }
 
@@ -334,7 +334,7 @@ export default function Contact() {
           display: flex;
           gap: 1.25rem;
           align-items: center;
-          background: linear-gradient(135deg, rgba(143, 217, 217, 0.05) 0%, rgba(2, 6, 89, 0.05) 100%);
+          background: linear-gradient(135deg, var(--success-bg) 0%, var(--section-bg-subtle) 100%);
           border-color: var(--glass-border);
           padding: 1.5rem 2rem;
         }
@@ -352,7 +352,7 @@ export default function Contact() {
 
         .status-text h4 {
           font-size: 1rem;
-          color: #fff;
+          color: var(--text-primary);
           margin-bottom: 0.25rem;
         }
 
@@ -368,7 +368,7 @@ export default function Contact() {
 
         .form-header-title {
           font-size: 1.5rem;
-          color: #fff;
+          color: var(--text-primary);
           margin-bottom: 2rem;
         }
 
@@ -402,7 +402,7 @@ export default function Contact() {
         .form-group input,
         .form-group select,
         .form-group textarea {
-          background: var(--bg-primary);
+          background: var(--input-bg);
           border: 1px solid var(--glass-border);
           padding: 0.8rem 1.25rem;
           border-radius: 4px;
@@ -448,7 +448,7 @@ export default function Contact() {
           width: 70px;
           height: 70px;
           border-radius: 50%;
-          background: rgba(143, 217, 217, 0.1);
+          background: var(--success-bg);
           color: var(--color-powder);
           border: 2px solid var(--color-powder);
           display: flex;
@@ -456,13 +456,13 @@ export default function Contact() {
           justify-content: center;
           font-size: 2.25rem;
           font-weight: 800;
-          box-shadow: 0 0 20px rgba(143, 217, 217, 0.3);
+          box-shadow: 0 0 20px var(--success-glow);
           margin-bottom: 1rem;
         }
 
         .form-success h2 {
           font-size: 2rem;
-          color: #fff;
+          color: var(--text-primary);
         }
 
         .form-success p {

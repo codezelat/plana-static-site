@@ -35,8 +35,9 @@ Always run `npm run lint` before completing any task.
 - `src/app/layout.tsx` - Root layout wrapping all pages with Header and Footer
 - `src/app/globals.css` - All CSS custom properties, resets, and utility classes
 - `src/app/page.tsx` - Home page (client component with forms and hover state)
-- `src/components/Header.tsx` - Fixed glassmorphism header with mobile drawer
+- `src/components/Header.tsx` - Fixed glassmorphism header with mobile drawer and theme toggle
 - `src/components/Footer.tsx` - Four-column footer with newsletter form
+- `src/components/ThemeProvider.tsx` - Theme context provider using `useSyncExternalStore`
 - `public/images/` - Event portfolio images and hero background
 - `public/logo.png` - Brand logo used in Header and Footer
 
@@ -53,19 +54,26 @@ Always run `npm run lint` before completing any task.
 ## Design System Conventions
 
 - Dark background: `--bg-primary: #0b0f19`
+- Light background: `--bg-primary: #f8fafc` (set via `[data-theme="light"]`)
+- Theme toggle in Header uses `useSyncExternalStore` with custom event (`plana-theme-change`)
+- Theme is persisted to `localStorage` key `plana-theme` and applied via `data-theme` attribute on `<html>`
+- An inline script in `layout.tsx` prevents flash of wrong theme (FOUC) by reading localStorage before React hydrates
 - Glass cards use `.glass-card` class with backdrop blur and border glow on hover
 - Gradient text uses `.gradient-text` class (aqua gradient)
 - Buttons use `.glow-btn` (filled) or `.glow-btn-outline` (outlined) classes
 - Section tags use `.section-tag` class (uppercase, aqua color, letter-spaced)
 - Grid layouts use `.grid-2`, `.grid-3`, `.grid-4` utility classes from globals.css
 - Responsive breakpoints: 968px (tablet), 640px (mobile)
+- When adding new colors, always define both dark (in `:root`) and light (in `[data-theme="light"]`) values in `globals.css`
+- Use semantic CSS variables (`--section-bg`, `--card-icon-bg`, `--badge-bg`, etc.) instead of hardcoded rgba() values in style jsx blocks
 
 ## Non-Obvious Patterns
 
 - Portfolio and service cards use `::before` and `::after` pseudo-elements for hover gradient overlays. The `::before` is always visible (dark overlay), while `::after` fades in on hover with category-specific gradients. Content must have `position: relative; z-index: 1` to appear above overlays.
-- The Header component uses `:global()` selectors in its `<style jsx>` block for Link components because Next.js scoping does not reach into child component rendered markup.
+- The Header component uses `:global()` selectors in its `<style jsx>` block for Link components and theme toggle because Next.js scoping does not reach into child component rendered markup.
 - Form submissions use `setTimeout` to simulate async behavior. There is no actual backend integration.
 - The consultation form on the home page and the contact form on `/contact` are independent implementations with similar but not identical fields.
+- The ThemeProvider uses `useSyncExternalStore` with a custom DOM event (`plana-theme-change`) to broadcast theme changes across components without prop drilling.
 
 ## Testing Rules
 
@@ -77,9 +85,10 @@ Always run `npm run lint` before completing any task.
 
 ### Always
 - Preserve the existing design token system in `globals.css`
+- Define both dark and light theme values for any new CSS custom property
 - Use `<style jsx>` for component-scoped styles
 - Use CSS custom properties for all colors, fonts, and transitions
-- Maintain the dark glassmorphism aesthetic
+- Maintain the glassmorphism aesthetic in both themes
 
 ### Ask First
 - Adding new npm dependencies

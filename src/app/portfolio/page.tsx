@@ -231,7 +231,7 @@ export default function Portfolio() {
 
         .filter-tab:hover,
         .filter-tab.active {
-          color: #fff;
+          color: var(--text-primary);
           border-color: var(--color-powder);
           background: rgba(143, 217, 217, 0.1);
           box-shadow: 0 0 10px rgba(143, 217, 217, 0.2);
@@ -251,7 +251,7 @@ export default function Portfolio() {
           padding: 2.5rem;
           border-radius: 6px;
           background-clip: padding-box; /* Clip background to prevent leaking out */
-          border: 1px solid #1b2640 !important; /* Solid border to prevent outline leak */
+          border: 1px solid var(--glass-border) !important;
           transition: var(--transition-smooth);
         }
 
@@ -275,7 +275,7 @@ export default function Portfolio() {
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(rgba(2, 4, 16, 0.76), rgba(2, 4, 16, 0.9));
+          background: linear-gradient(var(--overlay-dark-1), var(--overlay-dark-2));
           transition: opacity 0.5s ease;
           z-index: 0;
           opacity: 1;
@@ -318,7 +318,7 @@ export default function Portfolio() {
         }
 
         .project-card:hover .project-desc {
-          color: #ffffff;
+          color: var(--text-primary);
         }
 
         .project-card:hover .project-location-text {
@@ -350,14 +350,14 @@ export default function Portfolio() {
         }
 
         .project-tag-badge {
-          background: rgba(2, 6, 89, 0.2);
+          background: var(--badge-bg);
           color: var(--color-powder);
           padding: 0.25rem 0.75rem;
           border-radius: 4px;
           font-family: var(--font-display);
           font-weight: 700;
           font-size: 0.7rem;
-          border: 1px solid rgba(143, 217, 217, 0.15);
+          border: 1px solid var(--badge-border);
           text-transform: uppercase;
         }
 
@@ -369,7 +369,7 @@ export default function Portfolio() {
 
         .project-title {
           font-size: 1.4rem;
-          color: #fff;
+          color: var(--text-primary);
           margin-bottom: 0.75rem;
         }
 
@@ -404,8 +404,8 @@ export default function Portfolio() {
         }
 
         .detail-pill {
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: var(--pill-bg);
+          border: 1px solid var(--pill-border);
           font-size: 0.8rem;
           font-weight: 600;
           padding: 0.25rem 0.75rem;

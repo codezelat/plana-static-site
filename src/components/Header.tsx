@@ -3,10 +3,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTheme } from "./ThemeProvider";
 
 export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -47,6 +49,35 @@ export default function Header() {
           </nav>
 
           <div className="header-actions">
+            <button
+              className="theme-toggle"
+              onClick={toggleTheme}
+              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+              title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            >
+              <span className="theme-toggle-track">
+                <span className="theme-toggle-icon theme-toggle-sun">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                  </svg>
+                </span>
+                <span className="theme-toggle-icon theme-toggle-moon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                  </svg>
+                </span>
+                <span className="theme-toggle-knob" />
+              </span>
+            </button>
+
             <Link href="/contact" className="glow-btn header-cta">
               Start Planning
             </Link>
@@ -169,6 +200,69 @@ export default function Header() {
           font-size: 0.75rem;
         }
 
+        :global(.theme-toggle) {
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          z-index: 101;
+        }
+
+        :global(.theme-toggle-track) {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 52px;
+          height: 28px;
+          background: var(--bg-tertiary);
+          border: 1px solid var(--glass-border);
+          border-radius: 999px;
+          padding: 0 6px;
+          transition: var(--transition-smooth);
+        }
+
+        :global(.theme-toggle-track:hover) {
+          border-color: var(--color-powder);
+          box-shadow: 0 0 12px var(--success-glow);
+        }
+
+        :global(.theme-toggle-icon) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--text-muted);
+          transition: var(--transition-smooth);
+          z-index: 1;
+        }
+
+        :global(.theme-toggle-knob) {
+          position: absolute;
+          top: 3px;
+          left: 3px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: var(--color-navy);
+          transition: var(--transition-bounce);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        :global([data-theme="light"] .theme-toggle-knob) {
+          left: 27px;
+          background: var(--color-sunset-gold);
+        }
+
+        :global([data-theme="light"] .theme-toggle-sun) {
+          color: var(--color-sunset-gold);
+        }
+
+        :global([data-theme="dark"] .theme-toggle-moon) {
+          color: var(--color-aqua);
+        }
+
         .mobile-menu-toggle {
           display: none;
           flex-direction: column;
@@ -211,7 +305,7 @@ export default function Header() {
           width: 100%;
           max-width: 320px;
           height: 100%;
-          background: rgba(11, 15, 25, 0.98);
+          background: var(--drawer-bg);
           backdrop-filter: blur(25px);
           -webkit-backdrop-filter: blur(25px);
           z-index: 99;

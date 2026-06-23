@@ -382,7 +382,7 @@ export default function Home() {
           min-height: calc(100vh - 80px);
           display: flex;
           align-items: center;
-          background-image: linear-gradient(to right, rgba(11, 15, 25, 0.95) 0%, rgba(11, 15, 25, 0.65) 50%, rgba(11, 15, 25, 0.3) 100%), url('/images/hero_event_main.png');
+          background-image: var(--hero-gradient), url('/images/hero_event_main.png');
           background-size: cover;
           background-position: center;
         }
@@ -440,7 +440,7 @@ export default function Home() {
         /* Pillars of Service section styling */
         .core-pillars-section {
           padding: 8rem 0;
-          background: rgba(5, 11, 28, 0.3);
+          background: var(--section-bg);
           border-top: 1px solid var(--glass-border);
         }
 
@@ -453,13 +453,13 @@ export default function Home() {
           display: inline-flex;
           margin-bottom: 1.5rem;
           padding: 0.5rem;
-          background: rgba(22, 44, 64, 0.2);
+          background: var(--card-icon-bg);
           border-radius: 50%;
         }
 
         .pillar-title {
           font-size: 1.25rem;
-          color: #fff;
+          color: var(--text-primary);
           margin-bottom: 1rem;
         }
 
@@ -484,7 +484,7 @@ export default function Home() {
         }
 
         .service-badge {
-          background: rgba(143, 217, 217, 0.1);
+          background: var(--badge-bg);
           color: var(--color-powder);
           padding: 0.25rem 0.75rem;
           border-radius: 4px;
@@ -493,12 +493,12 @@ export default function Home() {
           font-size: 0.75rem;
           letter-spacing: 0.05em;
           text-transform: uppercase;
-          border: 1px solid rgba(143, 217, 217, 0.15);
+          border: 1px solid var(--badge-border);
         }
 
         .service-card-title {
           font-size: 1.5rem;
-          color: #fff;
+          color: var(--text-primary);
           margin-bottom: 1rem;
         }
 
@@ -538,8 +538,8 @@ export default function Home() {
           box-shadow: 0 10px 25px rgba(245, 158, 11, 0.15) !important;
         }
         .midnight-navy {
-          background: linear-gradient(135deg, rgba(5, 11, 28, 0.7) 0%, rgba(2, 6, 89, 0.3) 100%);
-          border-color: rgba(2, 6, 89, 0.3);
+          background: linear-gradient(135deg, var(--section-bg) 0%, var(--section-bg-subtle) 100%);
+          border-color: var(--glass-border);
         }
         .glass-coral {
           background: linear-gradient(135deg, rgba(255, 107, 107, 0.12) 0%, rgba(0, 240, 255, 0.03) 100%);
@@ -557,7 +557,7 @@ export default function Home() {
         /* Asymmetrical Portfolio styling */
         .asymmetrical-portfolio-section {
           padding: 8rem 0;
-          background: rgba(5, 11, 28, 0.2);
+          background: var(--section-bg-subtle);
           border-top: 1px solid var(--glass-border);
         }
 
@@ -584,7 +584,7 @@ export default function Home() {
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(rgba(2, 4, 16, 0.72), rgba(2, 4, 16, 0.88));
+          background: linear-gradient(var(--overlay-dark-1), var(--overlay-dark-2));
           transition: opacity 0.5s ease;
           z-index: 0;
           opacity: 1;
@@ -667,13 +667,13 @@ export default function Home() {
 
         .item-title {
           font-size: 1.5rem;
-          color: #fff;
+          color: var(--text-primary);
           margin-top: 1rem;
           margin-bottom: auto;
         }
 
         .hover-stat-panel {
-          background: rgba(5, 11, 28, 0.65);
+          background: var(--glass-bg);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
           border: 1px solid var(--glass-border);
@@ -705,7 +705,7 @@ export default function Home() {
         }
 
         .stat-row.border-top {
-          border-top: 1px solid rgba(255, 255, 255, 0.08);
+          border-top: 1px solid var(--stat-border);
           padding-top: 0.75rem;
           flex-direction: column;
           align-items: flex-start;
@@ -718,7 +718,7 @@ export default function Home() {
         }
 
         .stat-value {
-          color: #fff;
+          color: var(--text-primary);
           font-weight: 700;
         }
 
@@ -748,7 +748,7 @@ export default function Home() {
         .conversion-container {
           padding: 4rem;
           border-color: var(--glass-border);
-          background: linear-gradient(135deg, rgba(2, 6, 89, 0.3) 0%, rgba(5, 11, 28, 0.4) 100%);
+          background: linear-gradient(135deg, var(--section-bg-subtle) 0%, var(--section-bg) 100%);
         }
 
         .align-center {
@@ -793,7 +793,7 @@ export default function Home() {
           width: 60px;
           height: 60px;
           border-radius: 50%;
-          background: rgba(143, 217, 217, 0.1);
+          background: var(--success-bg);
           color: var(--color-powder);
           border: 2px solid var(--color-powder);
           display: flex;
@@ -801,12 +801,12 @@ export default function Home() {
           justify-content: center;
           font-size: 1.75rem;
           font-weight: 800;
-          box-shadow: 0 0 20px rgba(143, 217, 217, 0.3);
+          box-shadow: 0 0 20px var(--success-glow);
         }
 
         .form-success-box h3 {
           font-size: 1.75rem;
-          color: #fff;
+          color: var(--text-primary);
         }
 
         .funnel-form {
@@ -838,7 +838,7 @@ export default function Home() {
 
         .form-group input,
         .form-group select {
-          background: var(--bg-primary);
+          background: var(--input-bg);
           border: 1px solid var(--glass-border);
           padding: 0.8rem 1.25rem;
           border-radius: 4px;
@@ -867,7 +867,7 @@ export default function Home() {
 
         @media (max-width: 968px) {
           .hero-frame {
-            background-image: linear-gradient(rgba(11, 15, 25, 0.93), rgba(11, 15, 25, 0.85)), url('/images/hero_event_main.png') !important;
+            background-image: var(--hero-gradient-mobile), url('/images/hero_event_main.png') !important;
             background-position: center;
           }
           .hero-container {

@@ -263,7 +263,7 @@ export default function Services() {
 
         .service-title {
           font-size: 1.6rem;
-          color: #fff;
+          color: var(--text-primary);
         }
 
         .service-metric-badge {
@@ -289,8 +289,8 @@ export default function Services() {
         }
 
         .service-detail-item.navy {
-          background: linear-gradient(135deg, rgba(2, 6, 89, 0.4) 0%, rgba(5, 11, 28, 0.4) 100%);
-          border-color: rgba(2, 6, 89, 0.3);
+          background: linear-gradient(135deg, var(--section-bg-subtle) 0%, var(--section-bg) 100%);
+          border-color: var(--glass-border);
         }
 
         .service-detail-item.coral {
@@ -304,8 +304,8 @@ export default function Services() {
         }
 
         .service-detail-item.stadium {
-          background: linear-gradient(135deg, rgba(5, 11, 28, 0.7) 0%, rgba(2, 6, 89, 0.3) 100%);
-          border-color: rgba(63, 137, 166, 0.15);
+          background: linear-gradient(135deg, var(--section-bg) 0%, var(--section-bg-subtle) 100%);
+          border-color: var(--glass-border);
         }
 
         .service-desc {
@@ -317,7 +317,7 @@ export default function Services() {
         .deliverables-block {
           width: 100%;
           margin-bottom: 2.5rem;
-          background: rgba(2, 6, 89, 0.2);
+          background: var(--deliverable-bg);
           border: 1px solid var(--glass-border);
           padding: 1.5rem;
           border-radius: 4px;
@@ -326,7 +326,7 @@ export default function Services() {
         .deliverables-title {
           font-size: 0.95rem;
           font-weight: 700;
-          color: #fff;
+          color: var(--text-primary);
           margin-bottom: 1rem;
         }
 
@@ -351,7 +351,7 @@ export default function Services() {
         /* Workflow styles */
         .workflow-section {
           padding: 8rem 0;
-          background: rgba(5, 11, 28, 0.4);
+          background: var(--section-bg-alt);
           border-top: 1px solid var(--glass-border);
         }
 
@@ -371,7 +371,7 @@ export default function Services() {
 
         .workflow-title {
           font-size: 1.25rem;
-          color: #fff;
+          color: var(--text-primary);
           margin-bottom: 0.75rem;
         }
 
@@ -406,7 +406,7 @@ export default function Services() {
 
         .faq-question {
           font-size: 1.15rem;
-          color: #fff;
+          color: var(--text-primary);
           font-family: var(--font-body);
           font-weight: 600;
         }
@@ -434,7 +434,7 @@ export default function Services() {
           opacity: 1;
           margin-top: 1rem;
           padding-top: 1rem;
-          border-top: 1px solid rgba(255, 255, 255, 0.05);
+          border-top: 1px solid var(--faq-border);
         }
 
         .faq-answer {

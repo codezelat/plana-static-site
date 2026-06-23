@@ -184,12 +184,12 @@ export default function About() {
         .philosophy-section {
           padding: 6rem 0;
           border-top: 1px solid var(--glass-border);
-          background: rgba(5, 11, 28, 0.3);
+          background: var(--section-bg);
         }
 
         .philosophy-title {
           font-size: 2.25rem;
-          color: #fff;
+          color: var(--text-primary);
           margin-bottom: 1.5rem;
         }
 
@@ -201,7 +201,7 @@ export default function About() {
         .philosophy-card {
           text-align: center;
           padding: 4rem 3rem;
-          background: linear-gradient(135deg, rgba(2, 6, 89, 0.2) 0%, rgba(22, 44, 64, 0.1) 100%);
+          background: linear-gradient(135deg, var(--section-bg-subtle) 0%, var(--card-icon-bg) 100%);
           border-color: var(--glass-border);
         }
 
@@ -235,7 +235,7 @@ export default function About() {
         .value-icon {
           font-size: 2rem;
           padding: 0.75rem;
-          background: rgba(22, 44, 64, 0.2);
+          background: var(--card-icon-bg);
           border-radius: 4px;
           border: 1px solid var(--glass-border);
         }
@@ -246,7 +246,7 @@ export default function About() {
 
         .value-title {
           font-size: 1.3rem;
-          color: #fff;
+          color: var(--text-primary);
           margin-bottom: 0.75rem;
         }
 
@@ -258,7 +258,7 @@ export default function About() {
         /* Team Section styles */
         .team-section {
           padding: 8rem 0;
-          background: rgba(5, 11, 28, 0.4);
+          background: var(--section-bg-alt);
           border-top: 1px solid var(--glass-border);
         }
 
@@ -275,7 +275,7 @@ export default function About() {
           width: 80px;
           height: 80px;
           border-radius: 50%;
-          background: rgba(22, 44, 64, 0.2);
+          background: var(--card-icon-bg);
           border: 2px dashed var(--glass-border);
           display: flex;
           align-items: center;
@@ -296,7 +296,7 @@ export default function About() {
 
         .team-member-name {
           font-size: 1.25rem;
-          color: #fff;
+          color: var(--text-primary);
           margin-bottom: 0.25rem;
         }
 

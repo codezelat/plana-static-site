@@ -222,7 +222,7 @@ export default function Footer() {
         .newsletter-btn {
           background: var(--color-aqua);
           border: none;
-          color: #fff;
+          color: #ffffff;
           padding: 0.75rem 1.25rem;
           border-radius: 4px;
           font-family: var(--font-display);

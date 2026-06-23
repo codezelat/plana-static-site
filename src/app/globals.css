@@ -4,38 +4,114 @@
   --bg-primary: #0b0f19;
   --bg-secondary: #131b2e;
   --bg-tertiary: #1b2640;
-  
+
   --color-navy: #1d4ed8;
   --color-cerulean: #0077b6;
   --color-aqua: #00f0ff;
   --color-powder: #8FD9D9;
   --color-white: #ffffff;
-  
+
   --text-primary: #ffffff;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
-  
+
   --gradient-blue: linear-gradient(135deg, var(--color-navy) 0%, var(--color-cerulean) 100%);
   --gradient-aqua: linear-gradient(135deg, var(--color-cerulean) 0%, var(--color-aqua) 100%);
   --gradient-radial-loops: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, rgba(29, 78, 216, 0.08) 50%, transparent 100%);
-  
+
   --color-sunset-gold: #f59e0b;
   --color-sunset-coral: #ff6b6b;
   --gradient-sunset: linear-gradient(135deg, var(--color-sunset-coral) 0%, var(--color-sunset-gold) 100%);
-  
+
   --glass-bg: rgba(19, 27, 46, 0.55);
   --glass-border: rgba(255, 255, 255, 0.06);
   --glass-border-hover: rgba(0, 240, 255, 0.35);
   --glass-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.4);
   --glass-blur: blur(15px);
-  
+
   --font-display: 'Montserrat', sans-serif;
   --font-body: 'Open Sans', sans-serif;
-  
+
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-bounce: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-  
+
   --container-width: 1200px;
+
+  --section-bg: rgba(5, 11, 28, 0.3);
+  --section-bg-alt: rgba(5, 11, 28, 0.4);
+  --section-bg-subtle: rgba(5, 11, 28, 0.2);
+  --card-icon-bg: rgba(22, 44, 64, 0.2);
+  --badge-bg: rgba(143, 217, 217, 0.1);
+  --badge-border: rgba(143, 217, 217, 0.15);
+  --deliverable-bg: rgba(2, 6, 89, 0.2);
+  --input-bg: var(--bg-primary);
+  --pill-bg: rgba(255, 255, 255, 0.05);
+  --pill-border: rgba(255, 255, 255, 0.08);
+  --stat-border: rgba(255, 255, 255, 0.08);
+  --overlay-dark-1: rgba(2, 4, 16, 0.72);
+  --overlay-dark-2: rgba(2, 4, 16, 0.88);
+  --drawer-bg: rgba(11, 15, 25, 0.98);
+  --success-bg: rgba(143, 217, 217, 0.1);
+  --success-glow: rgba(143, 217, 217, 0.3);
+  --faq-border: rgba(255, 255, 255, 0.05);
+  --glow-btn-text: #fff;
+  --glow-btn-outline-text: #fff;
+  --hero-gradient: linear-gradient(to right, rgba(11, 15, 25, 0.95) 0%, rgba(11, 15, 25, 0.65) 50%, rgba(11, 15, 25, 0.3) 100%);
+  --hero-gradient-mobile: linear-gradient(rgba(11, 15, 25, 0.93), rgba(11, 15, 25, 0.85));
+  --body-bg-image:
+    radial-gradient(circle at 10% 20%, rgba(29, 78, 216, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(0, 240, 255, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(255, 107, 107, 0.04) 0%, transparent 50%);
+}
+
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-tertiary: #ffffff;
+
+  --color-navy: #2563eb;
+  --color-cerulean: #0284c7;
+  --color-aqua: #0891b2;
+  --color-powder: #0e7490;
+  --color-white: #0f172a;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-border-hover: rgba(14, 116, 144, 0.4);
+  --glass-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.08);
+
+  --color-sunset-gold: #d97706;
+  --color-sunset-coral: #e11d48;
+
+  --section-bg: rgba(241, 245, 249, 0.6);
+  --section-bg-alt: rgba(241, 245, 249, 0.8);
+  --section-bg-subtle: rgba(241, 245, 249, 0.4);
+  --card-icon-bg: rgba(14, 116, 144, 0.08);
+  --badge-bg: rgba(14, 116, 144, 0.08);
+  --badge-border: rgba(14, 116, 144, 0.2);
+  --deliverable-bg: rgba(241, 245, 249, 0.8);
+  --input-bg: #ffffff;
+  --pill-bg: rgba(0, 0, 0, 0.04);
+  --pill-border: rgba(0, 0, 0, 0.08);
+  --stat-border: rgba(0, 0, 0, 0.08);
+  --overlay-dark-1: rgba(248, 250, 252, 0.72);
+  --overlay-dark-2: rgba(248, 250, 252, 0.88);
+  --drawer-bg: rgba(255, 255, 255, 0.98);
+  --success-bg: rgba(14, 116, 144, 0.08);
+  --success-glow: rgba(14, 116, 144, 0.2);
+  --faq-border: rgba(0, 0, 0, 0.05);
+  --glow-btn-text: #ffffff;
+  --glow-btn-outline-text: var(--text-primary);
+  --hero-gradient: linear-gradient(to right, rgba(248, 250, 252, 0.95) 0%, rgba(248, 250, 252, 0.75) 50%, rgba(248, 250, 252, 0.4) 100%);
+  --hero-gradient-mobile: linear-gradient(rgba(248, 250, 252, 0.95), rgba(248, 250, 252, 0.9));
+  --body-bg-image:
+    radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(8, 145, 178, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(225, 29, 72, 0.03) 0%, transparent 50%);
 }
 
 /* Resets */
@@ -52,10 +128,7 @@ html {
 
 body {
   background-color: var(--bg-primary);
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(29, 78, 216, 0.15) 0%, transparent 45%),
-    radial-gradient(circle at 90% 80%, rgba(0, 240, 255, 0.1) 0%, transparent 45%),
-    radial-gradient(circle at 50% 50%, rgba(255, 107, 107, 0.04) 0%, transparent 50%);
+  background-image: var(--body-bg-image);
   background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-body);
@@ -101,7 +174,7 @@ button, input, textarea, select {
   border: 2px solid var(--bg-primary);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-aqua);
+  background: var(--color-powder);
 }
 
 /* Layout utilities */
@@ -190,7 +263,7 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #fff;
+  color: var(--glow-btn-text);
   background: var(--color-navy);
   border: none;
   border-radius: 4px;
@@ -235,9 +308,9 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #fff;
+  color: var(--glow-btn-outline-text);
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--glass-border);
   border-radius: 4px;
   cursor: pointer;
   transition: var(--transition-smooth);
@@ -288,7 +361,7 @@ p {
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 /* Loop Motif Animations */
