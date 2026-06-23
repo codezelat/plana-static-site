@@ -80,7 +80,7 @@ export default function Footer() {
         </div>
 
         <div className="container footer-bottom">
-          <p className="copyright">&copy; {new Date().getFullYear()} Plan A. All rights reserved.</p>
+          <p className="copyright">&copy; {new Date().getFullYear()} Plan A. A subsidiary of <a href="https://codezela.com" target="_blank" rel="noopener noreferrer" className="codezela-link">Codezela Technologies</a>. All rights reserved.</p>
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
@@ -261,6 +261,17 @@ export default function Footer() {
 
         .footer-bottom-links a:hover {
           color: var(--text-secondary);
+        }
+
+        :global(.codezela-link) {
+          color: var(--color-powder);
+          font-weight: 600;
+          transition: var(--transition-smooth);
+        }
+
+        :global(.codezela-link:hover) {
+          color: var(--color-aqua);
+          text-decoration: underline;
         }
 
         @media (max-width: 968px) {
