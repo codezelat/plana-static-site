@@ -26,7 +26,7 @@ export default function Footer() {
             </Link>
             <p className="footer-tagline">&ldquo;Every Great Event Starts with Plan A&rdquo;</p>
             <p className="footer-description">
-              From weddings and corporate gatherings to birthdays and concerts, Plan A creates unforgettable experiences across Sri Lanka.
+              Sri Lanka&apos;s premier corporate event management company delivering conferences, convocations, awards ceremonies, and celebrations with precision.
             </p>
             <div className="social-links">
               <a href="#" className="social-link" aria-label="LinkedIn">LN</a>
@@ -50,10 +50,11 @@ export default function Footer() {
           <div className="footer-services-section">
             <h4 className="footer-title">Event Services</h4>
             <ul className="footer-links">
-              <li><Link href="/services">Weddings</Link></li>
-              <li><Link href="/services">Corporate Gatherings</Link></li>
-              <li><Link href="/services">Birthdays & Milestones</Link></li>
-              <li><Link href="/services">Concerts & Entertainment</Link></li>
+              <li><Link href="/services">Conferences & Summits</Link></li>
+              <li><Link href="/services">Convocations & Awards</Link></li>
+              <li><Link href="/services">Product Launches</Link></li>
+              <li><Link href="/services">Corporate Galas</Link></li>
+              <li><Link href="/services">Weddings & Celebrations</Link></li>
             </ul>
           </div>
 

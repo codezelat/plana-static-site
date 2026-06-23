@@ -17,39 +17,39 @@ export default function Services() {
 
   const servicesDetails = [
     {
-      title: "Weddings",
-      tagline: "Elegant Beachfront & Ballroom Vows",
-      description: "From intimate beach declarations in Galle to grand ballroom galas in Colombo, we build comprehensive event schedules, design systems, and floral coordination.",
-      deliverables: ["Custom Glass Pavilion & Staging Designs", "Premium Floral & Visual Styling Guides", "Seating Charts & Coordinated Invites", "Vendor Coordination (Catering, Video, Sound)", "Onsite Timeline Control Directors"],
-      metric: "100%",
-      metricLabel: "Stress-Free Onsite Execution",
-      theme: "sunset",
-    },
-    {
-      title: "Corporate Gatherings",
-      tagline: "High-Profile Conferences & Galas",
-      description: "Product launches, corporate summits, and executive gala dinners executed with absolute logistical precision and sleek brand integration.",
-      deliverables: ["Curved Projection Walls & Curved LED Columns", "Attendee Sign-in App Integrations", "Multi-Point Corporate Transfer Systems", "Press Room & Stage Coordination", "Vendor Sourcing (Lighting, AV, Stage Safety)"],
-      metric: "1k+",
-      metricLabel: "Attendees Handled Seamlesly",
+      title: "Conferences & Summits",
+      tagline: "Multi-Day Corporate & Industry Events",
+      description: "Full-scale corporate conferences, industry summits, and leadership retreats spanning multiple halls, breakout rooms, and networking zones. We manage everything from speaker coordination and AV production to delegate transfers and branded experiences.",
+      deliverables: ["Multi-Hall Stage Design & LED Production", "Delegate Registration & Engagement Apps", "Speaker & VIP Coordination Logistics", "Live Streaming & Satellite Venue Linking", "Corporate Transfer & Accommodation Management"],
+      metric: "5k+",
+      metricLabel: "Delegates Managed Per Event",
       theme: "navy",
     },
     {
-      title: "Birthdays & Milestones",
-      tagline: "Curated Thematic Celebrations",
-      description: "Milestone anniversaries, themed dinners, and high-contrast private celebrations tailored to your personal aesthetic.",
-      deliverables: ["Bespoke Theme Visual Frameworks", "Live Jazz & Classic Ensemble Bookings", "Specialty Menu & Mixology Alignments", "Ambient Lighting & Floorplan Curation", "Interactive Photo & Backdrop Installations"],
-      metric: "Bespoke",
-      metricLabel: "Designed from Scratch",
+      title: "Convocations & Awards Ceremonies",
+      tagline: "Ceremonial Precision at Scale",
+      description: "University convocations, corporate recognition awards, and institutional ceremonies staged with meticulous processional coordination, VIP protocol, and commemorative production. We handle the ceremonial scripting, seating hierarchies, and media coordination so every moment unfolds flawlessly.",
+      deliverables: ["Ceremonial Stage & Processional Design", "VIP & Dignitary Protocol Management", "Graduate/Recipient Seating Coordination", "Live Projection & Overflow Venue Management", "Commemorative Photo & Video Production"],
+      metric: "10k+",
+      metricLabel: "Graduates & Awardees Staged",
+      theme: "sunset",
+    },
+    {
+      title: "Product Launches & Corporate Galas",
+      tagline: "High-Impact Brand Moments",
+      description: "Product reveals, investor dinners, annual general meetings, and corporate gala nights designed to generate maximum brand impression, media coverage, and stakeholder engagement.",
+      deliverables: ["Themed Stage & Lighting Design", "Media Wall & Press Coordination", "Catering & Hospitality Management", "Entertainment & Speaker Sourcing", "Post-Event Analytics & Reporting"],
+      metric: "100%",
+      metricLabel: "On-Time Delivery Rate",
       theme: "coral",
     },
     {
-      title: "Concerts & Entertainment",
-      tagline: "Stadium & Outdoor Audio Production",
-      description: "Full-scale festival production, sound array rigging, safety check-in control gates, and artist lounge coordination.",
-      deliverables: ["Truss Stage Rigging & Structural Calculations", "High-Fidelity Outdoor Audio Setup", "Crowd Separation & Navigation Barricades", "Artist Rider & Travel Liaison Teams", "Local Authority Permissions & Medical Support"],
-      metric: "5k+",
-      metricLabel: "Crowd Capacity Systems",
+      title: "Weddings & Celebrations",
+      tagline: "Bespoke Personal & Social Events",
+      description: "Intimate beachfront vows in Galle, grand ballroom receptions in Colombo, milestone birthdays, and private celebrations curated entirely to your personal vision with the same precision we bring to corporate events.",
+      deliverables: ["Custom Venue & Staging Designs", "Premium Floral & Visual Styling", "Catering & Mixology Coordination", "Entertainment & Band Sourcing", "Onsite Timeline Control Directors"],
+      metric: "Bespoke",
+      metricLabel: "Designed from Scratch",
       theme: "stadium",
     },
   ];
@@ -57,42 +57,46 @@ export default function Services() {
   const workflowSteps = [
     {
       step: "01",
-      title: "Concept & Scale Mapping",
-      desc: "We align on the vision, conduct a detailed venue audit, and draft a scale budget blueprint outlining fixed and variable projections.",
+      title: "Brief & Scope Alignment",
+      desc: "We align on event objectives, conduct venue audits, define delegate/attendee parameters, and draft a comprehensive budget blueprint with fixed and variable cost projections.",
     },
     {
       step: "02",
-      title: "Vendor Coordination",
-      desc: "Leveraging our interconnected loops, we align top-tier caters, decorator artists, and AV suppliers under strict Plan A SLAs.",
+      title: "Vendor & Venue Coordination",
+      desc: "Leveraging our enterprise network, we source and align convention centres, AV production houses, caterers, and transfer services under strict Plan A SLAs.",
     },
     {
       step: "03",
-      title: "Logistical Blueprinting",
-      desc: "We write granular hour-by-hour run sheets, safety grids, crowd control models, and guest arrival schedules.",
+      title: "Operational Blueprinting",
+      desc: "We produce granular hour-by-hour run sheets, safety grids, crowd flow models, speaker schedules, and VIP arrival coordination plans.",
     },
     {
       step: "04",
-      title: "Live Execution Control",
-      desc: "Our onsite team supervises every rigging link, catering slot, and audio switch to deliver a flawless experience.",
+      title: "Live Execution & Reporting",
+      desc: "Our onsite team supervises every rigging link, catering slot, audio cue, and attendee touchpoint. Post-event, we deliver analytics and feedback reports.",
     },
   ];
 
   const faqs: FAQItem[] = [
     {
-      question: "Do you coordinate events outside Colombo?",
-      answer: "Yes, Plan A designs and executes premium events all across Sri Lanka, including major destinations like Galle, Kandy, Bentota, Negombo, and Hambantota.",
+      question: "Do you handle multi-day corporate conferences?",
+      answer: "Absolutely. Multi-day conferences are our flagship service. We manage everything from multi-hall stage production and delegate registration apps to breakout room logistics, speaker coordination, live streaming to satellite venues, and corporate transfer scheduling across all days.",
     },
     {
-      question: "How far in advance should we schedule a consultation?",
-      answer: "For large weddings and concerts, we recommend booking our team 3 to 6 months in advance to lock down prime venues and vendor schedules. Corporate summits and private milestone dinners can usually be deployed with 1 to 2 months notice.",
+      question: "Can you coordinate university convocations at scale?",
+      answer: "Yes. We have staged convocations for over 10,000 graduates in a single ceremony. Our team handles ceremonial processional scripting, graduate seating hierarchies, VIP and dignitary protocol, live projection for overflow venues, and commemorative media production.",
     },
     {
-      question: "What makes Plan A different from standard coordinators?",
-      answer: "We combine structural precision with creative concept curation. We don't just 'place vendor calls'—we design the entire staging flow, manage multi-channel guest transfers, and hold vendors to high execution standards through our interconnected loops.",
+      question: "How far in advance should we book a corporate event?",
+      answer: "For large-scale conferences and convocations, we recommend booking 4 to 6 months in advance to secure premium venues and coordinate multi-vendor logistics. Awards galas and product launches can typically be executed with 2 to 3 months notice.",
     },
     {
-      question: "Can you work with our preferred venue or caterer?",
-      answer: "Absolutely. While we maintain a premium network of verified vendor loops across Sri Lanka, we are always happy to coordinate with your preferred venue or suppliers, ensuring they integrate seamlessly into our master event timeline.",
+      question: "What makes Plan A different from standard event coordinators?",
+      answer: "We combine corporate-grade structural precision with creative brand alignment. We don't just 'place vendor calls'—we design the entire staging flow, manage multi-channel attendee logistics, integrate your corporate identity into every touchpoint, and hold vendors to strict SLAs through our interconnected network.",
+    },
+    {
+      question: "Can you work with our preferred venue or suppliers?",
+      answer: "Absolutely. While we maintain a premium network of verified venues, AV providers, and caterers across Sri Lanka, we are always happy to coordinate with your preferred suppliers, ensuring they integrate seamlessly into our master event timeline.",
     },
   ];
 
@@ -106,7 +110,7 @@ export default function Services() {
             Expertise that scales. <span className="gradient-text">Experiences that endure.</span>
           </h1>
           <p className="hero-subtitle">
-            From logistics blueprinting to creative theme styling, Plan A manages all stages of premium event production across Sri Lanka.
+            From multi-day corporate conferences and university convocations to awards galas and product launches, Plan A delivers premium event production across Sri Lanka.
           </p>
         </div>
       </section>
@@ -198,8 +202,8 @@ export default function Services() {
       {/* Call to Action */}
       <section className="services-cta-section">
         <div className="container cta-box glass-card">
-          <h2>Ready to map your Plan A?</h2>
-          <p>Book a strategy session with our design coordinators to review layout structures and vendor targets.</p>
+          <h2>Ready to plan your next corporate event?</h2>
+          <p>Book a strategy session with our event directors to review venue options, staging concepts, and vendor allocations.</p>
           <Link href="/contact" className="glow-btn">
             Start Planning
           </Link>

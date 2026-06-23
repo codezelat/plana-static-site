@@ -19,23 +19,23 @@ interface TeamMember {
 export default function About() {
   const values: ValueItem[] = [
     {
-      title: "Logistical Feasibility",
-      desc: "An event is only as good as its weakest logistical link. We draft granular run sheets, safety calculations, and weather contingencies before a single decorator begins work.",
+      title: "Operational Rigor",
+      desc: "A corporate event is only as good as its weakest logistical link. We draft granular run sheets, safety calculations, speaker schedules, and weather contingencies before a single vendor mobilises.",
       icon: "📋",
     },
     {
-      title: "Unique Concepts",
-      desc: "We do not believe in templates. Every wedding theme, corporate layout, and concert setup is custom-engineered to match the location narrative.",
+      title: "Brand-Aligned Design",
+      desc: "Every staging element, LED backdrop, and attendee touchpoint is engineered around your corporate identity. No templates, no generic setups—just experiences that reinforce your brand.",
       icon: "✨",
     },
     {
-      title: "Interconnection",
-      desc: "Our strategic partnerships with Sri Lanka's best suppliers, caterers, and AV techs ensure flawless onsite execution and clean contractual accountability.",
+      title: "Enterprise Network",
+      desc: "Our strategic partnerships with Sri Lanka's premier convention centres, AV production houses, five-star hotels, and transfer services ensure flawless onsite execution with contractual accountability.",
       icon: "♾️",
     },
     {
-      title: "Time Management",
-      desc: "Live events move fast. Our onsite directors manage stage schedules, lighting cues, and guest movements with absolute structural precision.",
+      title: "Precision Timing",
+      desc: "Corporate events move fast. Our onsite directors manage speaker schedules, AV cues, ceremonial processions, and VIP movements with absolute structural precision.",
       icon: "⏱️",
     },
   ];
@@ -43,26 +43,26 @@ export default function About() {
   const team: TeamMember[] = [
     {
       name: "Kasun Jayasinghe",
-      role: "Event Logistics Director",
-      bio: "Kasun has managed logistics for international conferences and stadium-scale events across Sri Lanka, specializing in site layouts and flow operations.",
+      role: "Director of Corporate Events",
+      bio: "Kasun has managed logistics for international conferences, multi-day summits, and large-scale convocations across Sri Lanka, specializing in multi-venue coordination and delegate flow operations.",
       avatar: "⚓",
     },
     {
       name: "Minoli Perera",
-      role: "Concept Creative Lead",
-      bio: "Minoli designs custom visuals, stage themes, and lighting scopes, bridging the gap between brand voice and client atmospheres.",
+      role: "Creative & Brand Director",
+      bio: "Minoli designs corporate staging, LED environments, and branded event experiences, bridging the gap between corporate identity and immersive attendee atmospheres.",
       avatar: "🎨",
     },
     {
       name: "Rohan Goonetilleke",
-      role: "Technical AV & Rigging Lead",
-      bio: "With over 12 years in concert production, Rohan oversees outdoor sound arrays, truss structural checks, and staging safety lines.",
+      role: "Technical Production Lead",
+      bio: "With over 12 years in large-scale production, Rohan oversees conference AV systems, ceremonial staging, live streaming infrastructure, and multi-hall technical coordination.",
       avatar: "🔊",
     },
     {
       name: "Sanduni Fernando",
-      role: "Hospitality & Guest Liaison",
-      bio: "Sanduni coordinates client consultations, hotel vendor bookings, and VIP airport/transit transfers across Galle and Colombo.",
+      role: "VIP & Client Relations Director",
+      bio: "Sanduni coordinates corporate client consultations, VIP protocol management, five-star hotel partnerships, and multi-point executive transfer logistics across Colombo and beyond.",
       avatar: "⭐",
     },
   ];
@@ -77,7 +77,7 @@ export default function About() {
             Our philosophy. <span className="gradient-text">Interconnected loops.</span>
           </h1>
           <p className="hero-subtitle">
-            Plan A represents the convergence of meticulous logistics, customer narratives, and premium Sri Lankan vendor networks.
+            Plan A is Sri Lanka&apos;s trusted partner for corporate events, conferences, convocations, and celebrations. We bring enterprise-grade logistics to every occasion.
           </p>
         </div>
       </section>
@@ -89,18 +89,18 @@ export default function About() {
             <span className="section-tag">THE LOOP LOGIC</span>
             <h2 className="philosophy-title">Every great event starts with Plan A.</h2>
             <p className="philosophy-desc">
-              Planning a premium event is an exercise in complex logistics. A single failed coordination point can disrupt months of preparation.
+              Planning a corporate event is an exercise in complex logistics. A single failed coordination point—a delayed speaker transfer, an AV glitch, a seating misalignment—can undermine months of preparation and brand investment.
             </p>
             <p className="philosophy-desc">
-              Our visual symbol represents three interconnected circles: the <strong>Client Collaboration</strong>, the <strong>Precision Planning</strong>, and the <strong>Vendor Network</strong>. When these circles intersect perfectly, execution becomes seamless.
+              Our visual symbol represents three interconnected circles: the <strong>Client Brief</strong>, the <strong>Operational Planning</strong>, and the <strong>Vendor Network</strong>. When these circles intersect perfectly, every conference, convocation, and gala delivers on its promise.
             </p>
             <p className="philosophy-desc">
-              We operate coordination centers in Colombo to serve clients locally and internationally, deploying teams directly to beach venues, stadiums, and hotels across Sri Lanka.
+              We operate coordination centers in Colombo to serve corporate clients locally and internationally, deploying teams directly to convention centres, five-star hotels, university campuses, and stadiums across Sri Lanka.
             </p>
           </div>
           <div className="philosophy-card glass-card">
             <h3 className="card-highlight gradient-text">3 Loops</h3>
-            <p className="card-tagline">Client, Planning, and Vendor alignment. The formula behind Galle beachfront weddings and stadium-scale concerts.</p>
+            <p className="card-tagline">Client Brief, Operational Planning, and Vendor alignment. The formula behind Colombo&apos;s largest conferences and Sri Lanka&apos;s most prestigious convocations.</p>
           </div>
         </div>
       </section>
@@ -111,7 +111,7 @@ export default function About() {
           <div className="section-title-wrap">
             <span className="section-tag">OUR CORE VALUES</span>
             <h2 className="section-title">Logistics & Curation Standards</h2>
-            <p className="section-desc">The principles that govern our vendor relationships and campaign execution.</p>
+            <p className="section-desc">The principles that govern our corporate event delivery and vendor partnerships.</p>
           </div>
 
           <div className="grid-2">
@@ -134,7 +134,7 @@ export default function About() {
           <div className="section-title-wrap">
             <span className="section-tag">THE COORDINATORS</span>
             <h2 className="section-title">Meet the Event Directors</h2>
-            <p className="section-desc">Our directors hold local certifications and years of experience managing complex live setups.</p>
+            <p className="section-desc">Our directors bring decades of combined experience in corporate event management, conference production, and ceremonial staging.</p>
           </div>
 
           <div className="grid-4">
@@ -155,8 +155,8 @@ export default function About() {
       {/* CTA Box */}
       <section className="about-cta-section">
         <div className="container cta-box glass-card">
-          <h2>Ready to align your event loops?</h2>
-          <p>Start planning today with our logistics leaders to draft your project scope parameters.</p>
+          <h2>Ready to plan your next corporate event?</h2>
+          <p>Connect with our event directors to discuss your conference, convocation, or awards ceremony requirements.</p>
           <Link href="/contact" className="glow-btn">
             Connect With a Coordinator
           </Link>

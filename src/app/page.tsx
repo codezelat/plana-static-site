@@ -28,52 +28,82 @@ export default function Home() {
 
   const pillars = [
     {
-      title: "Structural Precision",
-      copy: "Meticulous logistics, timeline management, and structural blueprinting. We handle the heavy lifting so you can stay in the moment.",
+      title: "Corporate Precision",
+      copy: "Meticulous logistics, venue audits, and run-sheet blueprinting for conferences, convocations, and large-scale business events. We handle the operations so your leadership can focus on the stage.",
       iconColors: ["#8FD9D9", "rgba(143, 217, 217, 0.1)", "transparent"],
     },
     {
-      title: "Interconnected Network",
-      copy: "Strategic partnerships with Sri Lanka&rsquo;s top-tier venues, caterers, and production crews to guarantee premium execution.",
+      title: "Enterprise Network",
+      copy: "Strategic partnerships with Sri Lanka&rsquo;s premier convention centres, five-star hotels, AV production houses, and corporate transfer services to guarantee flawless delivery.",
       iconColors: ["#3F89A6", "rgba(63, 137, 166, 0.1)", "transparent"],
     },
     {
-      title: "Bespoke Curation",
-      copy: "Tailored concept designs unique to your narrative. No templates, no repeats—just unforgettable atmospheres.",
+      title: "Brand-Aligned Curation",
+      copy: "Every staging element, lighting cue, and attendee touchpoint is designed around your corporate identity. No templates, no repeats—just experiences that reinforce your brand.",
       iconColors: ["var(--color-sunset-gold)", "rgba(245, 158, 11, 0.15)", "transparent"],
     },
   ];
 
   const services = [
     {
-      title: "Weddings",
-      accent: "glass-sunset",
-      desc: "From intimate beach vows to grand ballroom celebrations, we design flawless timelines for your milestone day.",
-      badge: "Elegant & Bespoke",
-    },
-    {
-      title: "Corporate Gatherings",
+      title: "Conferences & Summits",
       accent: "midnight-navy",
-      desc: "Product launches, high-profile galas, and corporate conferences executed with absolute logistical precision.",
-      badge: "Sleek & Seamless",
+      desc: "Multi-day corporate conferences, industry summits, and leadership retreats with full AV production, attendee management, and brand integration.",
+      badge: "Flagship Service",
     },
     {
-      title: "Birthdays & Milestones",
+      title: "Convocations & Awards",
+      accent: "glass-sunset",
+      desc: "University convocations, corporate award ceremonies, and recognition galas staged with precision logistics, ceremonial scripting, and VIP coordination.",
+      badge: "Ceremonial Excellence",
+    },
+    {
+      title: "Product Launches & Galas",
       accent: "glass-coral",
-      desc: "Curated personal celebrations, milestone parties, and bespoke thematic dinners tailored entirely to you.",
-      badge: "Vibrant & Unique",
+      desc: "High-impact product reveals, investor dinners, and corporate gala nights designed to generate maximum brand impression and media coverage.",
+      badge: "High Impact",
     },
     {
-      title: "Concerts & Entertainment",
+      title: "Weddings & Celebrations",
       accent: "deep-blue-stadium",
-      desc: "Full-scale event production, technical sound/lighting coordination, crowd management, and flawless stage execution.",
-      badge: "Stadium Scale",
+      desc: "Intimate beachfront vows, grand ballroom receptions, milestone birthdays, and private celebrations curated entirely to your vision.",
+      badge: "Bespoke & Elegant",
     },
   ];
 
   const portfolioItems: PortfolioItem[] = [
     {
       id: 1,
+      title: "National Tech Summit 2025",
+      location: "Colombo Convention Centre",
+      type: "Conference",
+      guests: "2,500 Delegates",
+      solution: "Three-day multi-hall conference with curved LED walls, live streaming to 12 satellite venues, and a custom delegate engagement app.",
+      colorClass: "navy",
+      image: "/images/conference.png",
+    },
+    {
+      id: 2,
+      title: "University Convocation Ceremony",
+      location: "BMICH, Colombo",
+      type: "Convocation",
+      guests: "3,000 Graduates",
+      solution: "Full ceremonial staging with processional coordination, live projection for 5,000+ attendees, VIP protocol management, and commemorative media production.",
+      colorClass: "ocean-blue",
+      image: "/images/convocation.png",
+    },
+    {
+      id: 3,
+      title: "National Excellence Awards Gala",
+      location: "Shangri-La Colombo",
+      type: "Awards",
+      guests: "800 Executives",
+      solution: "Black-tie awards ceremony with custom stage design, LED backdrop walls, live entertainment, and seamless VIP arrival coordination across three ballrooms.",
+      colorClass: "heritage",
+      image: "/images/awards.png",
+    },
+    {
+      id: 4,
       title: "Sunset Coast Wedding",
       location: "Galle Beachfront",
       type: "Wedding",
@@ -81,36 +111,6 @@ export default function Home() {
       solution: "Bespoke glass pavilion on the shore with multi-tier lighting and offshore fireworks.",
       colorClass: "ocean-blue",
       image: "/images/wedding.png",
-    },
-    {
-      id: 2,
-      title: "Tech Summit Keynote",
-      location: "Colombo Exhibition Centre",
-      type: "Corporate",
-      guests: "1,200 Attendees",
-      solution: "Overlapping curved projection walls, custom attendee app flow, and seamless logistical execution.",
-      colorClass: "navy",
-      image: "/images/corporate.png",
-    },
-    {
-      id: 3,
-      title: "Open Air Concert",
-      location: "Kandy Stadium Grounds",
-      type: "Concert",
-      guests: "5,000+ Fans",
-      solution: "Rigged truss stage construction, high-fidelity sound array, and robust crowd navigation gates.",
-      colorClass: "stadium",
-      image: "/images/concert.png",
-    },
-    {
-      id: 4,
-      title: "Bespoke Heritage Gala",
-      location: "Mount Lavinia Hotel",
-      type: "Milestone",
-      guests: "250 Guests",
-      solution: "Colonial theme visual elements paired with classical orchestra coordination and custom projection maps.",
-      colorClass: "heritage",
-      image: "/images/gala.png",
     },
   ];
 
@@ -144,12 +144,12 @@ export default function Home() {
         <div className="hero-overlay-glow"></div>
         <div className="container hero-container">
           <div className="hero-content">
-            <span className="section-tag animate-float">EST. IN SRI LANKA</span>
+            <span className="section-tag animate-float">CORPORATE EVENT SPECIALISTS</span>
             <h1 className="hero-title">
               Every Great Event Starts with <span className="gradient-text">Plan A</span>
             </h1>
             <p className="hero-subtitle">
-              From weddings and corporate gatherings to birthdays and concerts, Plan A creates unforgettable experiences across Sri Lanka.
+              Sri Lanka&apos;s premier corporate event management company. From conferences and convocations to awards ceremonies and product launches, we deliver flawless experiences at scale.
             </p>
             <div className="hero-ctas">
               <Link href="#consultation" className="glow-btn">
@@ -170,8 +170,8 @@ export default function Home() {
         <div className="container">
           <div className="section-title-wrap">
             <span className="section-tag">OUR METHODOLOGY</span>
-            <h2 className="section-title">The Plan A Network</h2>
-            <p className="section-desc">We represent the seamless convergence of precise logistics, creative collaboration, and vendor trust.</p>
+            <h2 className="section-title">The Plan A Advantage</h2>
+            <p className="section-desc">The convergence of corporate-grade logistics, brand-aligned staging, and Sri Lanka&apos;s most trusted vendor network.</p>
           </div>
 
           <div className="grid-3">
@@ -222,8 +222,8 @@ export default function Home() {
         <div className="container">
           <div className="section-title-wrap">
             <span className="section-tag">PAST EVENTS</span>
-            <h2 className="section-title">Sri Lankan Landscape Showcase</h2>
-            <p className="section-desc">Explore how we execute premium logistics across Colombo, Galle, and Kandy.</p>
+            <h2 className="section-title">Featured Corporate & Event Showcase</h2>
+            <p className="section-desc">Explore how we execute premium event logistics across Colombo, Galle, and Kandy.</p>
           </div>
 
           <div className="asymmetrical-grid">
@@ -276,12 +276,13 @@ export default function Home() {
               <span className="section-tag">SCHEDULE</span>
               <h2 className="conversion-title">Let&apos;s build your Plan A.</h2>
               <p className="conversion-desc">
-                Contact our Austin or Colombo coordination office to lock down dates, draft early timelines, and discuss vendor allocations.
+                Contact our Colombo coordination office to lock down dates, draft early timelines, and discuss vendor allocations for your next corporate event.
               </p>
               <ul className="conversion-bullets">
                 <li>✓ Integrated Vendor Allocation</li>
                 <li>✓ Feasibility & Budget Outline</li>
-                <li>✓ Multi-Channel Operations</li>
+                <li>✓ Multi-Venue & Multi-Day Operations</li>
+                <li>✓ Corporate Brand Integration</li>
               </ul>
             </div>
 
@@ -317,10 +318,15 @@ export default function Home() {
                       required
                     >
                       <option value="">Select a category...</option>
-                      <option value="wedding">Wedding Planning</option>
-                      <option value="corporate">Corporate Gathering</option>
-                      <option value="birthday">Birthday & Milestone</option>
-                      <option value="concert">Concert & Entertainment</option>
+                      <option value="conference">Conference / Summit</option>
+                      <option value="convocation">Convocation Ceremony</option>
+                      <option value="awards">Awards / Recognition Gala</option>
+                      <option value="launch">Product Launch</option>
+                      <option value="corporate-gala">Corporate Gala / Dinner</option>
+                      <option value="seminar">Seminar / Workshop</option>
+                      <option value="wedding">Wedding</option>
+                      <option value="birthday">Birthday / Milestone</option>
+                      <option value="concert">Concert / Entertainment</option>
                       <option value="other">Other Event Type</option>
                     </select>
                   </div>
@@ -382,7 +388,7 @@ export default function Home() {
           min-height: calc(100vh - 80px);
           display: flex;
           align-items: center;
-          background-image: var(--hero-gradient), url('/images/hero_event_main.png');
+          background-image: var(--hero-gradient), url('/images/hero_corporate.png');
           background-size: cover;
           background-position: center;
         }
@@ -867,7 +873,7 @@ export default function Home() {
 
         @media (max-width: 968px) {
           .hero-frame {
-            background-image: var(--hero-gradient-mobile), url('/images/hero_event_main.png') !important;
+            background-image: var(--hero-gradient-mobile), url('/images/hero_corporate.png') !important;
             background-position: center;
           }
           .hero-container {

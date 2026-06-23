@@ -5,13 +5,13 @@ import Footer from "@/components/Footer";
 import ThemeProvider from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "Plan A | Premium Event Planners Sri Lanka",
-  description: "From weddings and corporate gatherings to birthdays and concerts, Plan A creates unforgettable experiences across Sri Lanka. Every great event starts with Plan A.",
-  keywords: ["Event Planner Sri Lanka", "Wedding Planner Colombo", "Corporate Events Sri Lanka", "Concert Organizer Colombo", "Birthday Planner Sri Lanka", "Plan A Events"],
+  title: "Plan A | Corporate Event Planners Sri Lanka",
+  description: "Sri Lanka's premier corporate event management company. Plan A delivers world-class conferences, convocations, awards ceremonies, product launches, and business events alongside weddings and celebrations.",
+  keywords: ["Corporate Event Planner Sri Lanka", "Business Conference Organizer Colombo", "Convocation Planner Sri Lanka", "Awards Ceremony Management", "Corporate Event Management", "Product Launch Events", "Plan A Events", "Wedding Planner Colombo"],
   authors: [{ name: "Plan A Events Agency" }],
   openGraph: {
-    title: "Plan A | Premium Event Planners Sri Lanka",
-    description: "From weddings and corporate gatherings to birthdays and concerts, Plan A creates unforgettable experiences across Sri Lanka.",
+    title: "Plan A | Corporate Event Planners Sri Lanka",
+    description: "Sri Lanka's premier corporate event management company. Conferences, convocations, awards ceremonies, and business events executed with precision.",
     type: "website",
   },
 };

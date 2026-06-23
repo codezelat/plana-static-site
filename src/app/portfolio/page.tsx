@@ -21,81 +21,82 @@ export default function Portfolio() {
 
   const categories = [
     { id: "all", name: "All Work" },
-    { id: "wedding", name: "Weddings" },
     { id: "corporate", name: "Corporate" },
-    { id: "birthday", name: "Birthdays" },
+    { id: "convocation", name: "Convocations" },
+    { id: "awards", name: "Awards" },
+    { id: "wedding", name: "Weddings" },
     { id: "concert", name: "Concerts" },
   ];
 
   const projects: EventProject[] = [
     {
       id: 1,
-      title: "Galle Fort Sunset Vows",
+      title: "National Tech Summit 2025",
+      category: "corporate",
+      categoryName: "Conference",
+      location: "Colombo Convention Centre",
+      guests: "2,500 Delegates",
+      solution: "Three-day multi-hall conference with curved LED walls, live streaming to 12 satellite venues, and a custom delegate engagement app with real-time polling.",
+      metric: "3 Days",
+      metricLabel: "Multi-Hall Execution",
+      image: "/images/conference.png",
+    },
+    {
+      id: 2,
+      title: "University of Colombo Convocation",
+      category: "convocation",
+      categoryName: "Convocation",
+      location: "BMICH, Colombo",
+      guests: "3,000 Graduates",
+      solution: "Full ceremonial staging with processional coordination, live projection for 5,000+ attendees, VIP protocol management, and commemorative media production.",
+      metric: "3,000",
+      metricLabel: "Graduates Staged",
+      image: "/images/convocation.png",
+    },
+    {
+      id: 3,
+      title: "National Excellence Awards Gala",
+      category: "awards",
+      categoryName: "Awards Ceremony",
+      location: "Shangri-La Colombo",
+      guests: "800 Executives",
+      solution: "Black-tie awards ceremony with custom stage design, LED backdrop walls, live entertainment, and seamless VIP arrival coordination across three ballrooms.",
+      metric: "800",
+      metricLabel: "Awardees & VIPs",
+      image: "/images/awards.png",
+    },
+    {
+      id: 4,
+      title: "Bentota Corporate Retreat",
+      category: "corporate",
+      categoryName: "Corporate Retreat",
+      location: "Bentota Beach Resort",
+      guests: "300 Executives",
+      solution: "Three-day leadership retreat with team-building activities, executive dinner galas, keynote staging, and coordinated multi-point resort transfers.",
+      metric: "3",
+      metricLabel: "Days of Programming",
+      image: "/images/seminar.png",
+    },
+    {
+      id: 5,
+      title: "Galle Fort Sunset Wedding",
       category: "wedding",
-      categoryName: "Weddings",
+      categoryName: "Wedding",
       location: "Galle Fort Beachfront",
       guests: "150 Guests",
-      solution: "Bespoke glass pavilion on the ramparts with warm ambient lighting and offshore fireworks.",
+      solution: "Bespoke glass pavilion on the ramparts with warm ambient lighting, offshore fireworks, and a curated seven-course dining experience.",
       metric: "100%",
       metricLabel: "Timeline Adherence",
       image: "/images/wedding.png",
     },
     {
-      id: 2,
-      title: "Colombo Tech Summit Keynote",
-      category: "corporate",
-      categoryName: "Corporate Gatherings",
-      location: "Colombo Exhibition Centre",
-      guests: "1,200 Attendees",
-      solution: "Overlapping curved projection walls, custom attendee app flow, and seamless logistical execution.",
-      metric: "1.2k",
-      metricLabel: "Attendees Managed",
-      image: "/images/corporate.png",
-    },
-    {
-      id: 3,
-      title: "Kandy Lake Concert Stage",
-      category: "concert",
-      categoryName: "Concerts & Entertainment",
-      location: "Kandy Lake Grounds",
-      guests: "5,000+ Fans",
-      solution: "Rigged truss stage construction, high-fidelity sound array, and robust crowd navigation gates.",
-      metric: "100kW",
-      metricLabel: "Audio Rigging",
-      image: "/images/concert.png",
-    },
-    {
-      id: 4,
-      title: "Bentota Corporate Retreat Gala",
-      category: "corporate",
-      categoryName: "Corporate Gatherings",
-      location: "Bentota Beach Resort",
-      guests: "300 Executives",
-      solution: "Bespoke lounge layouts on the beach, coordinated multi-point transfers, and custom live-band staging.",
-      metric: "3",
-      metricLabel: "Days of Coordinated Events",
-      image: "/images/corporate.png",
-    },
-    {
-      id: 5,
-      title: "Heritage Mansion Birthday Gala",
-      category: "birthday",
-      categoryName: "Birthdays & Milestones",
-      location: "Mount Lavinia Hotel",
-      guests: "250 Guests",
-      solution: "Colonial theme visual elements paired with classical orchestra coordination and custom projection maps.",
-      metric: "Custom",
-      metricLabel: "Thematic Styling",
-      image: "/images/gala.png",
-    },
-    {
       id: 6,
       title: "Negombo Soundwave Festival",
       category: "concert",
-      categoryName: "Concerts & Entertainment",
+      categoryName: "Concert",
       location: "Negombo Beach Shorefront",
       guests: "4,000+ Fans",
-      solution: "Weatherproof sound structures, crowd safety buffer lines, and synchronised ocean-facing laser arrays.",
+      solution: "Weatherproof sound structures, crowd safety buffer lines, synchronised ocean-facing laser arrays, and artist lounge coordination.",
       metric: "0",
       metricLabel: "Logistical Incidents",
       image: "/images/concert.png",
@@ -115,7 +116,7 @@ export default function Portfolio() {
             Architecting <span className="gradient-text">Experiences.</span>
           </h1>
           <p className="portfolio-subtitle">
-            Browse our portfolio of high-impact events across Sri Lanka, demonstrating precision planning and strategic vendor networks.
+            Browse our portfolio of corporate conferences, convocations, awards ceremonies, and premium events across Sri Lanka.
           </p>
 
           <div className="filter-tabs">
@@ -181,8 +182,8 @@ export default function Portfolio() {
       {/* Stats Callout Section */}
       <section className="portfolio-cta-section">
         <div className="container cta-box glass-card">
-          <h2>Ready to launch your event?</h2>
-          <p>Connect with our planning directors in Colombo to draft your early timeline parameters.</p>
+          <h2>Ready to plan your next corporate event?</h2>
+          <p>Connect with our event directors in Colombo to discuss venue options, staging concepts, and timeline parameters.</p>
           <Link href="/contact" className="glow-btn">
             Start Planning
           </Link>

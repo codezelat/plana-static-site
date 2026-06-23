@@ -51,7 +51,7 @@ export default function Contact() {
             Let&apos;s build <span className="gradient-text">your Plan A.</span>
           </h1>
           <p className="hero-subtitle">
-            Submit your event parameters below. Our Colombo coordination office will lock down dates, draft early timelines, and discuss vendor allocations.
+            Submit your corporate event requirements below. Our Colombo coordination office will review your brief, draft early timelines, and propose venue and vendor allocations.
           </p>
         </div>
       </section>
@@ -94,8 +94,8 @@ export default function Contact() {
             <div className="contact-status-card glass-card">
               <span className="status-indicator"></span>
               <div className="status-text">
-                <h4>Booking Cohorts Open</h4>
-                <p>Currently onboarding weddings, corporate events, and concerts for Q3 and Q4.</p>
+                <h4>Now Booking Q3 & Q4 Corporate Events</h4>
+                <p>Currently onboarding conferences, convocations, awards ceremonies, and corporate galas for the upcoming quarter.</p>
               </div>
             </div>
           </div>
@@ -106,14 +106,14 @@ export default function Contact() {
               <div className="form-success">
                 <span className="success-icon">✓</span>
                 <h2>Inquiry Successfully Received</h2>
-                <p>Thank you for choosing Plan A. Our planning directors in Colombo are reviewing your event parameters against regional vendor schedules. We will follow up via email within 24 hours to schedule your timeline draft call.</p>
+                <p>Thank you for choosing Plan A. Our corporate event directors in Colombo are reviewing your brief against venue availability and vendor schedules. We will follow up via email within 24 hours to schedule your planning call.</p>
                 <button onClick={() => setFormSubmitted(false)} className="glow-btn-outline reset-btn">
                   Send Another Inquiry
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="contact-form">
-                <h3 className="form-header-title">Event Parameters Form</h3>
+                <h3 className="form-header-title">Corporate Event Brief</h3>
                 
                 <div className="form-grid">
                   <div className="form-group">
@@ -166,10 +166,16 @@ export default function Contact() {
                       required
                     >
                       <option value="">Select a category...</option>
-                      <option value="wedding">Wedding Planning</option>
-                      <option value="corporate">Corporate Gathering</option>
-                      <option value="birthday">Birthday & Milestone</option>
-                      <option value="concert">Concert & Entertainment</option>
+                      <option value="conference">Conference / Summit</option>
+                      <option value="convocation">Convocation Ceremony</option>
+                      <option value="awards">Awards / Recognition Gala</option>
+                      <option value="launch">Product Launch</option>
+                      <option value="corporate-gala">Corporate Gala / Dinner</option>
+                      <option value="seminar">Seminar / Workshop</option>
+                      <option value="agm">AGM / Shareholder Meeting</option>
+                      <option value="wedding">Wedding</option>
+                      <option value="birthday">Birthday / Milestone</option>
+                      <option value="concert">Concert / Entertainment</option>
                       <option value="other">Other Event Type</option>
                     </select>
                   </div>
@@ -214,14 +220,14 @@ export default function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="message">Special Structural / Vendor Requirements</label>
+                  <label htmlFor="message">Event Brief / Special Requirements</label>
                   <textarea
                     id="message"
                     name="message"
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Describe any staging requirements, audio systems, hotel bookings, or timeline milestones..."
+                    placeholder="Describe your event objectives, staging requirements, AV needs, VIP coordination, or any special logistics..."
                   />
                 </div>
 
