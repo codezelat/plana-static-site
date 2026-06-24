@@ -259,7 +259,7 @@ export default function Home() {
                   </div>
 
                   <div className="item-footer">
-                    <span className="view-detail-hint">Hover to view details</span>
+                    <span className="view-detail-hint">Hover for details</span>
                   </div>
                 </div>
               );
@@ -580,6 +580,15 @@ export default function Home() {
           justify-content: space-between;
           position: relative;
           overflow: hidden;
+          border: 1px solid #1e293b !important;
+        }
+
+        :global([data-theme="light"]) .asymmetrical-item {
+          border-color: #cbd5e1 !important;
+        }
+
+        .asymmetrical-item:hover {
+          border-color: var(--color-aqua) !important;
         }
 
         /* Background overlays for smooth hover transitions */
