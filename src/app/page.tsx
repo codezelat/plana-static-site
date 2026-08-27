@@ -140,14 +140,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section closing-cta">
-        <div className="shell closing-cta-inner">
-          <h2>Let&apos;s make the plan.</h2>
-          <div>
-            <p>Share the date, audience and ambition. We will help you identify the next useful decision, even if the brief is still taking shape.</p>
+      <section className="skyline-cta" aria-labelledby="skyline-cta-heading">
+        <div className="skyline-cta-media">
+          <Image
+            src="/images/plan-a/colombo-lotus-tower-night.webp"
+            alt="Colombo skyline and Lotus Tower illuminated at night"
+            fill
+            sizes="(max-width: 968px) 100vw, 70vw"
+          />
+        </div>
+        <div className="shell skyline-cta-inner">
+          <div className="skyline-cta-copy">
+            <span className="micro-label">Start the conversation</span>
+            <h2 id="skyline-cta-heading">Tell us what you are planning.</h2>
+            <p>
+              Share the date, location, audience and ambition. We will help shape the next
+              useful decision, even if the brief is still taking form.
+            </p>
             <div className="cta-actions">
-              <Link href="/contact" className="button button-primary">Start an event brief <ArrowRight aria-hidden="true" size={18} /></Link>
-              <a href={`mailto:${siteConfig.email}`} className="button button-secondary">Email Plan A</a>
+              <Link href="/contact" className="button button-primary">
+                Start your event brief <ArrowRight aria-hidden="true" size={18} />
+              </Link>
+              <a href={`mailto:${siteConfig.email}`} className="button button-secondary">
+                Email Plan A
+              </a>
             </div>
           </div>
         </div>

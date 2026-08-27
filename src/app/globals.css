@@ -733,6 +733,69 @@ img {
   font-size: 1.1rem;
 }
 
+.skyline-cta {
+  position: relative;
+  overflow: hidden;
+  min-height: 650px;
+  display: grid;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-secondary);
+}
+
+.skyline-cta::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--bg-secondary) 5%, color-mix(in srgb, var(--bg-secondary) 92%, transparent) 38%, color-mix(in srgb, var(--bg-secondary) 16%, transparent) 76%),
+    linear-gradient(0deg, var(--bg-secondary) 0%, transparent 36%);
+  pointer-events: none;
+}
+
+.skyline-cta-media {
+  position: absolute;
+  z-index: 0;
+  inset: 0 0 0 auto;
+  width: 70%;
+}
+
+.skyline-cta-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 68% center;
+}
+
+.skyline-cta-inner {
+  position: relative;
+  z-index: 2;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  padding-block: var(--section-space);
+}
+
+.skyline-cta-copy {
+  max-width: 600px;
+}
+
+.skyline-cta h2 {
+  max-width: 600px;
+  font-size: clamp(3.2rem, 6vw, 6.6rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.94;
+}
+
+.skyline-cta p {
+  max-width: 34rem;
+  margin-top: 1.75rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
 .page-hero {
   padding: 12rem 0 6rem;
   border-bottom: 1px solid var(--line);
@@ -1217,6 +1280,31 @@ img {
     position: static;
   }
 
+  .skyline-cta {
+    min-height: 780px;
+    align-items: end;
+  }
+
+  .skyline-cta::after {
+    background: linear-gradient(0deg, var(--bg-secondary) 34%, color-mix(in srgb, var(--bg-secondary) 16%, transparent) 88%);
+  }
+
+  .skyline-cta-media {
+    inset: 0 0 auto;
+    width: 100%;
+    height: 58%;
+  }
+
+  .skyline-cta-media img {
+    object-position: 72% center;
+  }
+
+  .skyline-cta-inner {
+    min-height: 780px;
+    align-items: end;
+    padding-bottom: 5rem;
+  }
+
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1368,6 +1456,19 @@ img {
 
   .system-code {
     font-size: 7rem;
+  }
+
+  .skyline-cta {
+    min-height: 760px;
+  }
+
+  .skyline-cta-inner {
+    min-height: 760px;
+    padding-bottom: 4rem;
+  }
+
+  .skyline-cta h2 {
+    font-size: clamp(3rem, 14vw, 4.5rem);
   }
 
   .footer-bottom {

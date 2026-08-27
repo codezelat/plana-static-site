@@ -68,6 +68,8 @@ Search rankings depend on the quality and authority of the live domain in additi
 
 Business details and service content are centralised in `src/lib/site.ts`. Production images are stored under `public/images/plan-a` and should be compressed before they are added.
 
+The Colombo Lotus Tower night photograph is by [Gihanud2001](https://commons.wikimedia.org/wiki/File:Colombo_city_skyline_at_night.png), sourced from Wikimedia Commons, and dedicated to the public domain under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+
 Do not add invented clients, testimonials, awards, performance figures, or service claims. Confirm business facts with Plan A before publishing them.
 
 ## Deployment
