@@ -4,100 +4,79 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
-# AGENTS.md - Plan A Static Site
+# AGENTS.md - Plan A website
 
-## Project Overview
+## Project
 
-Next.js 16 App Router static site for Plan A, a premium event planning agency in Sri Lanka and a subsidiary of Codezela Technologies (https://codezela.com). Uses React 19, TypeScript, and a dark glassmorphism design system with Montserrat + Open Sans fonts. All styling is done via CSS custom properties defined in `globals.css` and scoped `<style jsx>` blocks within components. No Tailwind CSS or external UI libraries are used.
+Next.js 16 App Router website for Plan A, a Sri Lankan event management agency and subsidiary of Codezela Technologies. The site uses React, TypeScript, Instrument Sans, and a custom responsive CSS system. It has no Tailwind CSS, CMS, API, database, analytics, or form backend.
 
-## Tech Stack
+## Commands
 
-- Framework: Next.js 16.2.9 (App Router)
-- Language: TypeScript
-- React: 19.2.4
-- Package Manager: npm
-- Linting: ESLint 9 with `eslint-config-next`
-- Fonts: Google Fonts (Montserrat, Open Sans) loaded via CSS `@import`
-
-## Key Commands
-
-- Install deps: `npm install`
-- Dev server: `npm run dev`
-- Build: `npm run build`
-- Production start: `npm run start`
+- Install: `npm ci`
+- Develop: `npm run dev`
 - Lint: `npm run lint`
+- Type check: `npm run typecheck`
+- Build: `npm run build`
+- Full local gate: `npm run verify`
+- Production server: `npm run start`
 
-Always run `npm run lint` before completing any task.
+Always run `npm run lint` before finishing code work. For launch or release work, run `npm run verify`.
 
-## Project Structure
+## Architecture
 
-- `src/app/` - Pages using App Router (each folder = a route)
-- `src/app/layout.tsx` - Root layout wrapping all pages with Header and Footer
-- `src/app/globals.css` - All CSS custom properties, resets, and utility classes
-- `src/app/page.tsx` - Home page (client component with forms and hover state)
-- `src/components/Header.tsx` - Fixed glassmorphism header with mobile drawer and theme toggle
-- `src/components/Footer.tsx` - Four-column footer with newsletter form
-- `src/components/ThemeProvider.tsx` - Theme context provider using `useSyncExternalStore`
-- `public/images/` - Event portfolio images and hero background
-- `public/logo.png` - Brand logo used in Header and Footer
+- `src/app/layout.tsx`: root metadata, site schema, header, main content, and footer
+- `src/app/page.tsx`: home page
+- `src/app/services/page.tsx`: service index
+- `src/app/services/[slug]/page.tsx`: static service detail pages
+- `src/app/portfolio/page.tsx`: selected work
+- `src/app/about/page.tsx`: agency and parent-company information
+- `src/app/contact/page.tsx`: contact details and event brief
+- `src/app/not-found.tsx`: branded 404
+- `src/app/error.tsx` and `global-error.tsx`: runtime recovery
+- `src/components/Header.tsx`: the main client-side mobile navigation
+- `src/components/ContactForm.tsx`: the client-side mailto form
+- `src/lib/site.ts`: central business details, services, portfolio data, FAQs, and navigation
+- `src/lib/metadata.ts`: shared page metadata builder
+- `src/app/globals.css`: design system and responsive styles
+- `public/images/plan-a`: production image assets
 
-## Code Style
+Pages are Server Components unless browser interaction requires a Client Component.
 
-- All pages are `"use client"` components (they use `useState` for forms and interactivity)
-- Styling uses `<style jsx>` blocks co-located within each component
-- CSS custom properties from `globals.css` are referenced via `var(--token-name)`
-- Use `Link` from `next/link` for internal navigation, not `<a>` tags
-- Use `usePathname()` from `next/navigation` for active route detection
-- Component files use PascalCase naming (e.g., `Header.tsx`, `Footer.tsx`)
-- Page files are named `page.tsx` per Next.js App Router conventions
+## Code conventions
 
-## Design System Conventions
+- Read the relevant local Next.js documentation before using or changing framework APIs.
+- Use `Link` from `next/link` for internal navigation.
+- Use `Image` from `next/image` for content imagery.
+- Keep reusable business facts and service content in `src/lib/site.ts`.
+- Use semantic HTML, logical heading order, visible focus states, and accessible names.
+- Keep colours, type, spacing, and transitions in the existing CSS custom-property system.
+- Use CSS classes, not JSX inline style objects.
+- Preserve the clean midnight, cyan, and coral visual direction.
+- Support the 968px and 640px responsive breakpoints.
+- Do not introduce a styling framework or component library.
+- Ask before adding a dependency, changing root layout structure, or changing global design tokens.
 
-- Dark background: `--bg-primary: #0b0f19`
-- Light background: `--bg-primary: #f8fafc` (set via `[data-theme="light"]`)
-- Theme toggle in Header uses `useSyncExternalStore` with custom event (`plana-theme-change`)
-- Theme is persisted to `localStorage` key `plana-theme` and applied via `data-theme` attribute on `<html>`
-- An inline script in `layout.tsx` prevents flash of wrong theme (FOUC) by reading localStorage before React hydrates
-- Glass cards use `.glass-card` class with backdrop blur and border glow on hover
-- Gradient text uses `.gradient-text` class (aqua gradient)
-- Buttons use `.glow-btn` (filled) or `.glow-btn-outline` (outlined) classes
-- Section tags use `.section-tag` class (uppercase, aqua color, letter-spaced)
-- Grid layouts use `.grid-2`, `.grid-3`, `.grid-4` utility classes from globals.css
-- Responsive breakpoints: 968px (tablet), 640px (mobile)
-- When adding new colors, always define both dark (in `:root`) and light (in `[data-theme="light"]`) values in `globals.css`
-- Use semantic CSS variables (`--section-bg`, `--card-icon-bg`, `--badge-bg`, etc.) instead of hardcoded rgba() values in style jsx blocks
+## Content and SEO
 
-## Non-Obvious Patterns
+- Never invent clients, testimonials, reviews, awards, metrics, partner relationships, or business claims.
+- Keep the confirmed email, phone, address, and Codezela relationship in `siteConfig` unless the user supplies a correction.
+- Every indexable route needs a unique title, description, canonical URL, social metadata, and one clear H1.
+- Keep sitemap, robots, manifest, icons, structured data, internal links, and visible page copy aligned with actual routes and services.
+- Write naturally for people. Do not repeat search phrases unnaturally or create thin keyword pages.
 
-- Portfolio and service cards use `::before` and `::after` pseudo-elements for hover gradient overlays. The `::before` is always visible (dark overlay), while `::after` fades in on hover with category-specific gradients. Content must have `position: relative; z-index: 1` to appear above overlays.
-- The Header component uses `:global()` selectors in its `<style jsx>` block for Link components and theme toggle because Next.js scoping does not reach into child component rendered markup.
-- Form submissions use `setTimeout` to simulate async behavior. There is no actual backend integration.
-- The consultation form on the home page and the contact form on `/contact` are independent implementations with similar but not identical fields.
-- The ThemeProvider uses `useSyncExternalStore` with a custom DOM event (`plana-theme-change`) to broadcast theme changes across components without prop drilling.
+## Verification
 
-## Testing Rules
-
-- Run `npm run lint` before marking any task complete
-- Run `npm run build` to verify the production build succeeds with no errors
-- Verify responsive behavior at 968px and 640px breakpoints
+- Run `npm run verify` for release work.
+- Check all core routes, every service slug, and at least one unknown URL in a production server.
+- Verify desktop, tablet, and mobile layouts, including horizontal overflow and content clipping.
+- Test the mobile menu with keyboard and touch, FAQ disclosure controls, the contact form, email links, phone links, and external links.
+- Confirm the generated canonical, Open Graph, Twitter, robots, sitemap, manifest, favicon, and Apple icon responses.
+- Distinguish local build proof from deployed and live-domain proof.
 
 ## Boundaries
 
-### Always
-- Preserve the existing design token system in `globals.css`
-- Define both dark and light theme values for any new CSS custom property
-- Use `<style jsx>` for component-scoped styles
-- Use CSS custom properties for all colors, fonts, and transitions
-- Maintain the glassmorphism aesthetic in both themes
-
-### Ask First
-- Adding new npm dependencies
-- Modifying the global CSS custom properties
-- Changing the layout structure in `layout.tsx`
-
-### Never
-- Introduce Tailwind CSS or other CSS frameworks
-- Use inline styles instead of CSS custom properties
-- Remove or modify the `<!-- BEGIN:nextjs-agent-rules -->` block
-- Commit `.env` files, secrets, or credentials
-- Force push to main
+- Do not commit secrets or `.env` files.
+- Do not add fake backend success states.
+- Do not deploy, reconnect providers, or change DNS unless the user explicitly requests it.
+- Do not force push.
+- Preserve this Next.js rules block exactly.

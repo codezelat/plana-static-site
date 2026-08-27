@@ -1,6 +1,7 @@
 "use client";
 
 import { RotateCcw } from "lucide-react";
+import Link from "next/link";
 import "./globals.css";
 
 export default function GlobalError({ retry }: { retry: () => void }) {
@@ -22,9 +23,9 @@ export default function GlobalError({ retry }: { retry: () => void }) {
                   <button className="button button-primary" type="button" onClick={retry}>
                     Try again <RotateCcw aria-hidden="true" size={18} />
                   </button>
-                  <a href="/" className="button button-secondary">
+                  <Link href="/" className="button button-secondary">
                     Return home
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
