@@ -11,9 +11,11 @@ The site covers corporate events, conferences and MICE programmes, convocations 
 - CSS custom properties and global responsive styles
 - `next/font` for Instrument Sans
 - Lucide icons
+- Cloudflare Turnstile bot protection
+- Resend email delivery
 - npm package management
 
-No environment variables or external data services are required for the current site.
+The contact form uses server-only Resend and Turnstile credentials. Copy `.env.example` to `.env.local` and replace the placeholder values before local development.
 
 ## Routes
 
@@ -24,15 +26,17 @@ No environment variables or external data services are required for the current 
 | `/services/[slug]` | Six statically generated service pages |
 | `/portfolio` | Selected event photography |
 | `/about` | Plan A and Codezela relationship |
-| `/contact` | Contact details and email-draft event brief |
+| `/contact` | Contact details and protected event brief form |
+| `/api/contact` | Validated Turnstile and Resend form delivery |
 | Unknown routes | Branded 404 response |
 
-The contact form does not store or transmit data to a server. It prepares a message in the visitor's email application for `info@plana.lk`.
+The contact form verifies every submission on the server with Cloudflare Turnstile, then sends the brief from `notifications@plana.lk` to `info@plana.lk` through Resend. It does not use a database or show a success state unless Resend accepts the email.
 
 ## Local development
 
 ```bash
 npm ci
+cp .env.example .env.local
 npm run dev
 ```
 
@@ -78,8 +82,9 @@ The project can run on a standard Next.js host. Before launch:
 
 1. Run `npm ci` and `npm run verify` from a clean checkout.
 2. Confirm the production domain, HTTPS, redirects, and response headers.
-3. Test every route and form interaction on desktop and mobile.
-4. Verify `robots.txt`, `sitemap.xml`, manifest, icons, canonical URLs, and social previews on the live domain.
-5. Connect the domain to Google Search Console and appropriate privacy-safe analytics if approved.
+3. Add every value from `.env.example` to the production environment and confirm `plana.lk` in the Turnstile hostname allowlist.
+4. Test every route and form interaction on desktop and mobile, including a real form delivery.
+5. Verify `robots.txt`, `sitemap.xml`, manifest, icons, canonical URLs, and social previews on the live domain.
+6. Connect the domain to Google Search Console and appropriate privacy-safe analytics if approved.
 
 This repository is private and proprietary to Plan A and Codezela Technologies.

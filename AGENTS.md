@@ -8,7 +8,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ## Project
 
-Next.js 16 App Router website for Plan A, a Sri Lankan event management agency and subsidiary of Codezela Technologies. The site uses React, TypeScript, Instrument Sans, and a custom responsive CSS system. It has no Tailwind CSS, CMS, API, database, analytics, or form backend.
+Next.js 16 App Router website for Plan A, a Sri Lankan event management agency and subsidiary of Codezela Technologies. The site uses React, TypeScript, Instrument Sans, and a custom responsive CSS system. It has no Tailwind CSS, CMS, database, or analytics. The contact form uses a Route Handler, Cloudflare Turnstile, and Resend.
 
 ## Commands
 
@@ -31,10 +31,11 @@ Always run `npm run lint` before finishing code work. For launch or release work
 - `src/app/portfolio/page.tsx`: selected work
 - `src/app/about/page.tsx`: agency and parent-company information
 - `src/app/contact/page.tsx`: contact details and event brief
+- `src/app/api/contact/route.ts`: validated Turnstile and Resend form delivery
 - `src/app/not-found.tsx`: branded 404
 - `src/app/error.tsx` and `global-error.tsx`: runtime recovery
 - `src/components/Header.tsx`: the main client-side mobile navigation
-- `src/components/ContactForm.tsx`: the client-side mailto form
+- `src/components/ContactForm.tsx`: the client-side protected contact form
 - `src/lib/site.ts`: central business details, services, portfolio data, FAQs, and navigation
 - `src/lib/metadata.ts`: shared page metadata builder
 - `src/app/globals.css`: design system and responsive styles

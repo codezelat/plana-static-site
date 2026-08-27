@@ -1067,10 +1067,78 @@ img {
   cursor: pointer;
 }
 
+.form-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+}
+
+.form-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.turnstile-area {
+  margin: 0.25rem 0 1.25rem;
+}
+
+.turnstile-widget {
+  width: 100%;
+  min-height: 65px;
+}
+
+.turnstile-config-error {
+  margin-top: 0.65rem;
+  color: var(--signal);
+  font-size: 0.84rem;
+}
+
+.loading-icon {
+  animation: loading-spin 0.8s linear infinite;
+}
+
+@keyframes loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .form-note {
   margin-top: 1rem;
   color: var(--text-muted);
   font-size: 0.78rem;
+}
+
+.form-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  min-height: 1.5rem;
+  margin-top: 0.8rem;
+  font-size: 0.84rem;
+}
+
+.form-status svg {
+  flex: 0 0 auto;
+  margin-top: 0.05rem;
+}
+
+.form-status.is-idle {
+  color: var(--text-secondary);
+}
+
+.form-status.is-submitting,
+.form-status.is-success {
+  color: var(--accent);
+}
+
+.form-status.is-error {
+  color: var(--signal);
 }
 
 .system-page {

@@ -56,29 +56,35 @@ export default function ContactForm() {
       return;
     }
 
-    turnstileWidgetIdRef.current = window.turnstile.render(turnstileContainerRef.current, {
-      sitekey: turnstileSiteKey,
-      action: "plana_contact",
-      theme: "dark",
-      size: "flexible",
-      callback: (token) => {
-        setTurnstileToken(token);
-        setTurnstileUnavailable(false);
-        setSubmissionState("idle");
-        setStatusMessage("Verification complete. Your event brief is ready to send.");
-      },
-      "expired-callback": () => {
-        setTurnstileToken("");
-        setStatusMessage("Verification expired. Please complete it again before sending.");
-      },
-      "error-callback": () => {
-        setTurnstileToken("");
-        setTurnstileUnavailable(true);
-        setSubmissionState("error");
-        setStatusMessage("Verification could not load. Check your connection and try again.");
-      },
-      "timeout-callback": resetTurnstile,
-    });
+    try {
+      turnstileWidgetIdRef.current = window.turnstile.render(turnstileContainerRef.current, {
+        sitekey: turnstileSiteKey,
+        action: "plana_contact",
+        theme: "dark",
+        size: "flexible",
+        callback: (token) => {
+          setTurnstileToken(token);
+          setTurnstileUnavailable(false);
+          setSubmissionState("idle");
+          setStatusMessage("Verification complete. Your event brief is ready to send.");
+        },
+        "expired-callback": () => {
+          setTurnstileToken("");
+          setStatusMessage("Verification expired. Please complete it again before sending.");
+        },
+        "error-callback": () => {
+          setTurnstileToken("");
+          setTurnstileUnavailable(true);
+          setSubmissionState("error");
+          setStatusMessage("Verification could not load. Check your connection and try again.");
+        },
+        "timeout-callback": resetTurnstile,
+      });
+    } catch {
+      setTurnstileUnavailable(true);
+      setSubmissionState("error");
+      setStatusMessage("Verification could not load. Please email info@plana.lk.");
+    }
   }, [resetTurnstile]);
 
   useEffect(() => {
