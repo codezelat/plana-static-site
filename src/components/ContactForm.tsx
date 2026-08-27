@@ -38,6 +38,7 @@ export default function ContactForm() {
   const [turnstileUnavailable, setTurnstileUnavailable] = useState(false);
   const turnstileContainerRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetIdRef = useRef<string | null>(null);
+  const submissionIdRef = useRef<string | null>(null);
 
   const resetTurnstile = useCallback(() => {
     setTurnstileToken("");
@@ -107,6 +108,7 @@ export default function ContactForm() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    submissionIdRef.current ??= crypto.randomUUID();
 
     setSubmissionState("submitting");
     setStatusMessage("Sending your event brief to Plan A...");
@@ -116,7 +118,7 @@ export default function ContactForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          submissionId: crypto.randomUUID(),
+          submissionId: submissionIdRef.current,
           turnstileToken,
           website: formData.get("website"),
           name: formData.get("name"),
@@ -139,6 +141,7 @@ export default function ContactForm() {
       }
 
       form.reset();
+      submissionIdRef.current = null;
       setSubmissionState("success");
       setStatusMessage(result?.message || "Thank you. Your event brief has been sent to Plan A.");
       resetTurnstile();
