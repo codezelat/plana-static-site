@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  description: "The requested Plan A page could not be found.",
+  alternates: { canonical: null },
+};
 
 export default function NotFound() {
   return (
