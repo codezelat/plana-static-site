@@ -1,6 +1,7 @@
 const MAX_BODY_BYTES = 25_000;
 const TURNSTILE_TIMEOUT_MS = 8_000;
 const RESEND_TIMEOUT_MS = 10_000;
+const TURNSTILE_DEVELOPMENT_TEST_SECRET = "1x0000000000000000000000000000000AA";
 const DEFAULT_ALLOWED_HOSTNAMES = ["plana.lk", "www.plana.lk", "localhost", "127.0.0.1"];
 const EVENT_TYPES = new Set([
   "Corporate event",
@@ -271,10 +272,12 @@ export async function POST(request: Request) {
 
   const expectedAction = process.env.TURNSTILE_EXPECTED_ACTION?.trim() || "plana_contact";
   const verifiedHostname = verification.hostname?.toLowerCase() ?? "";
+  const isDevelopmentTest =
+    process.env.NODE_ENV === "development" && turnstileSecret === TURNSTILE_DEVELOPMENT_TEST_SECRET;
   if (
     !verification.success ||
-    verification.action !== expectedAction ||
-    !allowed.has(verifiedHostname)
+    (!isDevelopmentTest &&
+      (verification.action !== expectedAction || !allowed.has(verifiedHostname)))
   ) {
     console.warn("Turnstile rejected contact form", {
       action: verification.action,

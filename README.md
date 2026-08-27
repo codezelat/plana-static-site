@@ -42,6 +42,8 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000), or use the port printed by Next.js when 3000 is unavailable.
 
+Production Turnstile widgets can reject `localhost`. For local form testing, create `.env.development.local` with Cloudflare's official always-pass test site key and secret. The contact endpoint accepts those test credentials only while Next.js is running in development mode. Production builds always require the configured action and an allowed hostname.
+
 ## Verification
 
 ```bash
