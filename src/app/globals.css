@@ -797,6 +797,19 @@ img {
   margin-top: 2rem;
 }
 
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.breadcrumbs a:hover {
+  color: var(--accent);
+}
+
 .service-detail-image {
   position: relative;
   min-height: 560px;
@@ -997,6 +1010,45 @@ img {
   font-size: 0.78rem;
 }
 
+.system-page {
+  min-height: 78svh;
+  display: grid;
+  align-items: center;
+  padding: 11rem 0 7rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.system-page-inner {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.45fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2.5rem, 8vw, 8rem);
+}
+
+.system-code {
+  color: var(--accent);
+  font-size: clamp(6rem, 18vw, 15rem);
+  font-weight: 500;
+  letter-spacing: -0.08em;
+  line-height: 0.75;
+  opacity: 0.22;
+}
+
+.system-copy h1 {
+  max-width: 840px;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+
+.system-copy p {
+  max-width: 40rem;
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 1.08rem;
+}
+
 .site-footer {
   background: var(--bg-primary);
   padding: 5rem 0 1.5rem;
@@ -1095,6 +1147,11 @@ img {
   .closing-cta-inner,
   .parent-company {
     grid-template-columns: 1fr;
+  }
+
+  .system-page-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .home-hero {
@@ -1302,6 +1359,15 @@ img {
 
   .event-form {
     padding: 1.1rem;
+  }
+
+  .system-page {
+    min-height: 72svh;
+    padding: 8rem 0 5rem;
+  }
+
+  .system-code {
+    font-size: 7rem;
   }
 
   .footer-bottom {

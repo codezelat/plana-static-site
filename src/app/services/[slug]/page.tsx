@@ -3,9 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
+import { createPageMetadata } from "@/lib/metadata";
 import { services, siteConfig } from "@/lib/site";
 
 type ServicePageProps = { params: Promise<{ slug: string }> };
+
+export const dynamicParams = false;
 
 function findService(slug: string) {
   return services.find((service) => service.slug === slug);
@@ -19,17 +22,11 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   const { slug } = await params;
   const service = findService(slug);
   if (!service) return {};
-  return {
+  return createPageMetadata({
     title: service.title,
     description: service.description,
-    alternates: { canonical: `/services/${service.slug}` },
-    openGraph: {
-      title: service.title,
-      description: service.description,
-      url: `/services/${service.slug}`,
-      images: [{ url: service.image, alt: service.imageAlt }],
-    },
-  };
+    path: `/services/${service.slug}`,
+  });
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
@@ -55,12 +52,43 @@ export default async function ServicePage({ params }: ServicePageProps) {
       acceptedAnswer: { "@type": "Answer", text: faq.answer },
     })),
   };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Event management services",
+        item: `${siteConfig.url}/services`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: service.shortName,
+        item: `${siteConfig.url}/services/${service.slug}`,
+      },
+    ],
+  };
 
   return (
     <>
       <section className="service-detail-hero">
         <div className="shell service-detail-grid">
           <div className="service-detail-copy">
+            <nav className="breadcrumbs" aria-label="Breadcrumb">
+              <Link href="/">Home</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/services">Services</Link>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">{service.shortName}</span>
+            </nav>
             <span className="micro-label">{service.shortName}</span>
             <h1 className="page-title">{service.title}</h1>
             <p className="page-lead">{service.intro}</p>
@@ -106,7 +134,15 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, faqSchema]).replace(/</g, "\\u003c") }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]).replace(
+            /</g,
+            "\\u003c",
+          ),
+        }}
+      />
     </>
   );
 }

@@ -28,19 +28,19 @@ export default function ContactForm() {
   }
 
   return (
-    <form className="event-form" onSubmit={handleSubmit}>
+    <form className="event-form" onSubmit={handleSubmit} aria-describedby="form-note">
       <div className="form-grid">
         <label>
           Your name
-          <input name="name" autoComplete="name" required />
+          <input name="name" autoComplete="name" maxLength={80} required />
         </label>
         <label>
           Email address
-          <input name="email" type="email" autoComplete="email" required />
+          <input name="email" type="email" autoComplete="email" maxLength={160} required />
         </label>
         <label>
           Phone number
-          <input name="phone" type="tel" autoComplete="tel" />
+          <input name="phone" type="tel" autoComplete="tel" maxLength={30} />
         </label>
         <label>
           Event type
@@ -61,11 +61,17 @@ export default function ContactForm() {
         </label>
         <label>
           Location
-          <input name="location" placeholder="Colombo, Galle, Kandy..." required />
+          <input
+            name="location"
+            autoComplete="address-level2"
+            placeholder="Colombo, Galle, Kandy..."
+            maxLength={120}
+            required
+          />
         </label>
         <label>
           Estimated guests
-          <input name="guests" inputMode="numeric" />
+          <input name="guests" inputMode="numeric" pattern="[0-9, ]*" maxLength={20} />
         </label>
       </div>
       <label>
@@ -74,15 +80,17 @@ export default function ContactForm() {
           name="message"
           rows={6}
           placeholder="Share the objective, audience, venue ideas, production needs or anything already decided."
+          minLength={20}
+          maxLength={2000}
           required
         />
       </label>
       <button className="button button-primary form-submit" type="submit">
         Open email draft <ArrowUpRight aria-hidden="true" size={18} />
       </button>
-      <p className="form-note" aria-live="polite">
+      <p id="form-note" className="form-note" aria-live="polite">
         {opened
-          ? "Your email app should now have the brief ready to send."
+          ? `If your email app did not open, send the brief directly to ${siteConfig.email}.`
           : `This form opens a prepared email to ${siteConfig.email}. No details are stored on this website.`}
       </p>
     </form>

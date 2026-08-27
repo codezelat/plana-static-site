@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
@@ -10,6 +10,17 @@ import { navItems } from "@/lib/site";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (!open) return;
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setOpen(false);
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [open]);
 
   return (
     <header className="site-header">
@@ -44,14 +55,27 @@ export default function Header() {
         id="mobile-navigation"
         className={`mobile-nav ${open ? "is-open" : ""}`}
         aria-label="Mobile navigation"
+        aria-hidden={!open}
+        inert={!open}
       >
         <div className="shell mobile-nav-inner">
-          {navItems.map((item, index) => (
-            <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>
-              <span>0{index + 1}</span>
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item, index) => {
+            const active =
+              pathname === item.href ||
+              (item.href !== "/" && pathname.startsWith(`${item.href}/`));
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={active ? "page" : undefined}
+                onClick={() => setOpen(false)}
+              >
+                <span>0{index + 1}</span>
+                {item.label}
+              </Link>
+            );
+          })}
         </div>
       </nav>
     </header>
