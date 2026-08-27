@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { createPageMetadata } from "@/lib/metadata";
 import { workImages } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Event Portfolio",
   description:
     "View selected event moments from Plan A, including convocations, business awards, cultural welcomes and formal ceremonies in Sri Lanka.",
-  alternates: { canonical: "/portfolio" },
-};
+  path: "/portfolio",
+});
 
 export default function PortfolioPage() {
   return (

@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { createPageMetadata } from "@/lib/metadata";
 import { services } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Event Management Services",
   description:
     "Explore Plan A event management services in Sri Lanka for corporate events, conferences, MICE, convocations, awards, weddings, activations and production.",
-  alternates: { canonical: "/services" },
-};
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (

@@ -14,6 +14,8 @@ export const siteConfig = {
   },
   parentName: "Codezela Technologies",
   parentUrl: "https://codezela.com",
+  ogImage: "/images/plan-a/plan-a-og.jpg",
+  ogImageAlt: "Plan A event management in Colombo, Sri Lanka",
   description:
     "Event management in Sri Lanka for corporate events, conferences, MICE programmes, convocations, awards, weddings and brand activations.",
 } as const;

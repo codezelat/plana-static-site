@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import { createPageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Contact an Event Planner in Sri Lanka",
   description:
     "Contact Plan A to discuss an event in Colombo or elsewhere in Sri Lanka. Share your date, location, audience and event objective.",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

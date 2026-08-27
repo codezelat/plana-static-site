@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { createPageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "About Plan A",
   description:
     "Meet Plan A, a Sri Lankan event management agency and subsidiary of Codezela Technologies, focused on clear planning and well-directed live experiences.",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+});
 
 const principles = [
   { title: "Clarity", copy: "A useful plan makes the next decision, owner and deadline easy to see." },

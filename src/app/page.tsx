@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { createPageMetadata } from "@/lib/metadata";
 import { primaryFaqs, services, siteConfig, workImages } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: { absolute: "Event Management Company in Sri Lanka | Plan A" },
+export const metadata = createPageMetadata({
+  title: "Event Management Company in Sri Lanka | Plan A",
   description:
     "Plan corporate events, conferences, MICE programmes, convocations, awards, weddings and brand activations in Colombo and across Sri Lanka with Plan A.",
-  alternates: { canonical: "/" },
-};
+  path: "/",
+  absoluteTitle: true,
+});
 
 const process = [
   { title: "Define the brief", copy: "We align on the audience, objective, format, timing, location and decisions that matter first." },
